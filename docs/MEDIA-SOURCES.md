@@ -12,7 +12,7 @@ Produto: Ecomax
 Fonte original: `https://www.tlcagro.com/images/produtos.png`
 Página onde foi encontrado: `https://www.tlcagro.com/`
 Data de acesso: 2026-08-28
-Uso no site: hero, carrossel, seção TLC e card da marca
+Uso no site: seção exclusiva TLC Agro e linha Ecomax
 Transformações realizadas: conversão para WebP, preservando proporção e rótulo
 Observações sobre autorização: material publicado no domínio oficial da TLC Agro e usado para apresentar produtos representados pela Susttenta; não foi localizada declaração de licença pública.
 
@@ -24,7 +24,7 @@ Produto: institucional TLC Agro
 Fonte original: `https://www.tlcagro.com/images/faq.jpg`
 Página onde foi encontrado: `https://www.tlcagro.com/`
 Data de acesso: 2026-08-28
-Uso no site: apoio visual do FAQ
+Uso no site: original preservado para eventual uso futuro; não exibido na hierarquia atual
 Transformações realizadas: conversão para WebP sem alteração de proporção
 Observações sobre autorização: material publicado no domínio oficial da TLC Agro; não foi localizada declaração de licença pública.
 
@@ -36,7 +36,7 @@ Produto: marca TLC Agro
 Fonte original: `https://www.tlcagro.com/images/logo.svg`
 Página onde foi encontrado: `https://www.tlcagro.com/`
 Data de acesso: 2026-08-28
-Uso no site: original preservado para identificação da fonte
+Uso no site: identificação da marca na seção exclusiva TLC Agro
 Transformações realizadas: nenhuma
 Observações sobre autorização: arquivo servido pelo domínio oficial da TLC Agro; não foi localizada declaração de licença pública.
 
@@ -96,7 +96,7 @@ Produto: marca Embio
 Fonte original: `https://embio.com.br/wp-content/uploads/2023/11/Ativo-4.png`
 Página onde foi encontrado: `https://embio.com.br/`
 Data de acesso: 2026-08-29
-Uso no site: card da marca representada
+Uso no site: hero Embio, visão geral da linha e seção Embiofert
 Transformações realizadas: nenhuma
 Observações sobre autorização: logotipo servido pelo domínio oficial da Embio; não foi localizada declaração de licença pública.
 
@@ -106,7 +106,7 @@ Produto: Embio 3000 e Propulsor Embio
 Fonte original: `https://embio.com.br/tratamento-embiofert/`
 Página onde foi encontrado: site oficial Embio
 Data de acesso: 2026-08-28
-Uso no site: hero, carrossel, seção Embiofert e card Embio
+Uso no site: hero Embio, seção principal Embiofert e poster do vídeo futuro
 Transformações realizadas: versão WebP otimizada já existente, preservada
 Observações sobre autorização: mídia obtida do site oficial da marca representada; não foi localizada declaração de licença pública.
 
@@ -116,7 +116,7 @@ Produto: Embio 3100
 Fonte original: `https://embio.com.br/embio-3100/`
 Página onde foi encontrado: site oficial Embio
 Data de acesso: 2026-08-28
-Uso no site: carrossel e comparação de produtos
+Uso no site: visão geral Embio, seção exclusiva Embio 3100 e posters de vídeos futuros
 Transformações realizadas: versão WebP otimizada já existente, preservada
 Observações sobre autorização: mídia obtida do site oficial da marca representada; não foi localizada declaração de licença pública.
 
@@ -126,13 +126,45 @@ Produto: Embio 6000
 Fonte original: `https://embio.com.br/embio-6000/`
 Página onde foi encontrado: site oficial Embio
 Data de acesso: 2026-08-28
-Uso no site: carrossel e comparação de produtos
+Uso no site: visão geral Embio, seção exclusiva Embio 6000 e posters de vídeos futuros
 Transformações realizadas: versão WebP otimizada já existente, preservada
 Observações sobre autorização: mídia obtida do site oficial da marca representada; não foi localizada declaração de licença pública.
 
 ## Fontes técnicas consultadas
 
-- Embio: `https://embio.com.br/`, `https://embio.com.br/tratamento-embiofert/`, `https://embio.com.br/propulsor-embio/`, `https://embio.com.br/embio-3100/` e `https://embio.com.br/embio-6000/`.
+- Embio: `https://embio.com.br/`, `https://embio.com.br/tratamento-embiofert/`, `https://embio.com.br/propulsor-embio/`, `https://embio.com.br/embio-3100/`, `https://embio.com.br/embio-6000/`, `https://embio.com.br/embio-5000-plus/` e `https://embio.com.br/embio-8000/`.
 - Tratamento de Dejetos: `https://tratamentodedejetos.com.br/`.
 - TLC Agro: `https://www.tlcagro.com/` e os arquivos oficiais relacionados acima.
 - Referência funcional de cookies e rodapé: `https://novositeffrdobrasil.vercel.app/`.
+
+## Mídias Embio restauradas para a nova hierarquia
+
+- Arquivo local: `public/media/embio-official/embio-5000.webp`
+- Tipo: imagem WebP
+- Produto: Embio 5000+
+- Fonte original: `https://embio.com.br/embio-5000-plus/`
+- Página onde foi encontrado: página oficial do produto Embio 5000+
+- Data de acesso: 2026-08-29
+- Uso no site: seção secundária “Outras soluções para cenários específicos”
+- Transformações realizadas: versão WebP já otimizada, restaurada do histórico documentado do projeto
+- Observações sobre autorização: material publicado no domínio oficial da Embio e utilizado para representar comercialmente o produto. Não foi identificada declaração de licença pública.
+
+- Arquivo local: `public/media/embio-official/embio-8000.webp`
+- Tipo: imagem WebP
+- Produto: Embio 8000
+- Fonte original: `https://embio.com.br/embio-8000/`
+- Página onde foi encontrado: página oficial do produto Embio 8000
+- Data de acesso: 2026-08-29
+- Uso no site: seção secundária “Outras soluções para cenários específicos”
+- Transformações realizadas: versão WebP já otimizada, restaurada do histórico documentado do projeto
+- Observações sobre autorização: material publicado no domínio oficial da Embio e utilizado para representar comercialmente o produto. Não foi identificada declaração de licença pública.
+
+- Arquivo local: `public/media/brand/br-flag.svg`
+- Tipo: SVG vetorial local
+- Produto: crédito institucional da desenvolvedora
+- Fonte original: construção vetorial geométrica da bandeira nacional
+- Página onde foi encontrado: não aplicável
+- Data de acesso: 2026-08-29
+- Uso no site: identificação visual do Brasil junto ao crédito da FFR do Brasil Technology
+- Transformações realizadas: SVG local otimizado e sem dependência externa
+- Observações sobre autorização: representação geométrica de símbolo nacional; não contém marca ou mídia de terceiros.

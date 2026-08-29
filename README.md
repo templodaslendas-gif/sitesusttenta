@@ -1,12 +1,12 @@
 # Susttenta
 
-Site institucional e comercial da Susttenta, representante das soluções Embio e TLC Agro para tratamento biológico, ambiência, manejo de dejetos e controle estratégico de moscas.
+Site institucional e comercial da Susttenta, representante prioritária da linha Embio para tratamento biológico, ambiência, manejo de dejetos e efluentes. A TLC Agro integra o portfólio como linha complementar em uma apresentação independente.
 
 ## Stack
 
 - Next.js 16, React 19 e TypeScript
 - CSS responsivo próprio
-- Embla Carousel para a apresentação das áreas de atuação
+- Componentes React e interações leves sem biblioteca adicional de animação
 - Testes com `node:test`
 - Consentimento granular de cookies persistido localmente
 

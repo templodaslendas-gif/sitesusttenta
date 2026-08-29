@@ -22,10 +22,10 @@ export function Header() {
     <div className="header-top container">
       <button className="menu-toggle" aria-label={open ? "Fechar menu" : "Abrir menu"} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
       <a className="site-logo" href="#inicio" aria-label="Susttenta, página inicial"><Image src="/favicon-master-1024.png" alt="" width={54} height={54} priority /><Image src="/logo-susttenta-wordmark.png" alt="Susttenta" width={178} height={25} priority /></a>
-      <WhatsAppLink message={whatsappMessages.general} ariaLabel="Falar com a Susttenta pelo WhatsApp" className="header-whatsapp"><WhatsAppIcon size={19} /><span>Falar com a Susttenta</span></WhatsAppLink>
+      <WhatsAppLink message={whatsappMessages.embio} ariaLabel="Falar com a Susttenta pelo WhatsApp" className="header-whatsapp whatsapp-pulse"><WhatsAppIcon size={19} /><span>Falar com a Susttenta</span></WhatsAppLink>
     </div>
     <nav className="desktop-navigation" aria-label="Navegação principal">{navigationItems.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}</nav>
-    <nav id="mobile-navigation" className={`mobile-navigation ${open ? "is-open" : ""}`} aria-label="Navegação móvel" hidden={!open}>{navigationItems.map((item) => <a key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>)}<WhatsAppLink message={whatsappMessages.general} ariaLabel="Solicitar orientação pelo WhatsApp">Solicitar orientação</WhatsAppLink></nav>
+    <nav id="mobile-navigation" className={`mobile-navigation ${open ? "is-open" : ""}`} aria-label="Navegação móvel" hidden={!open}>{navigationItems.map((item) => <a key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>)}<WhatsAppLink message={whatsappMessages.embio} ariaLabel="Solicitar orientação pelo WhatsApp" className="whatsapp-pulse">Solicitar orientação</WhatsAppLink></nav>
   </header>;
 }
 
@@ -34,14 +34,14 @@ export function Footer() {
   return <>
     <footer className="site-footer">
       <div className="container footer-grid">
-        <div className="footer-summary"><a className="footer-logo" href="#inicio"><Image src="/favicon-master-1024.png" alt="" width={52} height={52} /><Image src="/logo-susttenta-wordmark.png" alt="Susttenta" width={164} height={23} /></a><p>Soluções biotecnológicas com orientação responsável para manejo de dejetos, ambiência e controle estratégico de moscas.</p></div>
-        <div><strong>Navegação</strong><a href="#susttenta">A Susttenta</a><a href="#desafios">Desafios</a><a href="#depoimentos">Depoimentos</a><a href="#faq">Perguntas frequentes</a></div>
-        <div><strong>Soluções</strong><a href="#embiofert">Tratamento Embiofert</a><a href="#linha-embio">Embio 3100 e 6000</a><a href="#tlc-agro">TLC Agro e Ecomax</a><WhatsAppLink message={whatsappMessages.general} ariaLabel="Falar com a Susttenta pelo WhatsApp">WhatsApp</WhatsAppLink></div>
+        <div className="footer-summary"><a className="footer-logo" href="#inicio"><Image src="/favicon-master-1024.png" alt="" width={52} height={52} /><Image src="/logo-susttenta-wordmark.png" alt="Susttenta" width={164} height={23} /></a><p>Representante Embio com orientação para tratamento biológico, ambiência, biodigestores e efluentes.</p><a className="footer-phone" href="tel:+5546999259777">+55 (46) 99925-9777</a></div>
+        <div><strong>Produtos Embio</strong><a href="#embiofert">Tratamento Embiofert</a><a href="#embio-3100">Embio 3100</a><a href="#embio-6000">Embio 6000</a><a href="#outras-solucoes">Embio 5000+ e 8000</a></div>
+        <div><strong>TLC Agro e Ecomax</strong><a href="#tlc-agro">Conhecer a linha Ecomax</a><WhatsAppLink message={whatsappMessages.ecomax} ariaLabel="Falar sobre a linha Ecomax pelo WhatsApp">WhatsApp Ecomax</WhatsAppLink><strong className="footer-subheading">Acesso rápido</strong><a href="#pedro">Sobre Pedro</a><a href="#faq">Perguntas frequentes</a></div>
         <div><strong>Privacidade</strong><Link href="/privacidade">Política de Privacidade</Link><Link href="/cookies">Política de Cookies</Link><Link href="/termos">Termos de Uso</Link><button type="button" onClick={manageCookies}>Gerenciar preferências</button></div>
       </div>
-      <div className="container footer-bottom"><span>© 2026 Susttenta. Todos os direitos reservados.</span><a href="https://novositeffrdobrasil.vercel.app/" target="_blank" rel="noopener noreferrer">Produzido por FFR do Brasil Technology</a></div>
+      <div className="container footer-bottom"><span>© 2026 Susttenta. Todos os direitos reservados.</span><a href="https://novositeffrdobrasil.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Desenvolvido por FFR do Brasil Technology, Brasil"><Image src="/media/brand/br-flag.svg" alt="" width={22} height={15} />Desenvolvido por FFR do Brasil Technology</a></div>
     </footer>
-    <WhatsAppLink message={whatsappMessages.general} ariaLabel="Falar com a Susttenta pelo WhatsApp" className="floating-whatsapp"><WhatsAppIcon size={29} /></WhatsAppLink>
+    <WhatsAppLink message={whatsappMessages.embio} ariaLabel="Falar com a Susttenta pelo WhatsApp" className="floating-whatsapp whatsapp-pulse"><WhatsAppIcon size={29} /></WhatsAppLink>
     <CookieConsent />
   </>;
 }

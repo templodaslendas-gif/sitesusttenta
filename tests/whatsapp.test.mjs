@@ -50,12 +50,16 @@ test("provides distinct approved messages for each commercial context", async ()
 
   assert.deepEqual(Object.keys(whatsappMessages).sort(), [
     "ecomax",
+    "embio",
     "embio3100",
+    "embio5000",
     "embio6000",
+    "embio8000",
     "embiofert",
     "general",
     "pedro",
   ]);
+  assert.match(whatsappMessages.embio, /soluções Embio/i);
   assert.match(whatsappMessages.embio6000, /biodigestor/i);
   assert.match(whatsappMessages.pedro, /^Olá, Pedro!/);
 });
