@@ -36,12 +36,26 @@ async function readCssTree(directory) {
 }
 
 test("emits the site's animation and accessibility safeguards", async () => {
-  const css = await readCssTree(path.join(root, "dist"));
+  const css = await readCssTree(path.join(root, "app"));
 
   assert.match(css, /scroll-behavior:\s*smooth/);
-  assert.match(css, /hero__orbit/);
+  assert.match(css, /hero-orbit/);
   assert.match(css, /data-reveal/);
   assert.match(css, /prefers-reduced-motion:\s*reduce/);
+});
+
+test("keeps closed navigation out of tab order and constrains modal focus", async () => {
+  const [chrome, modal, closing] = await Promise.all([
+    readFile(path.join(root, "components/site/site-chrome.tsx"), "utf8"),
+    readFile(path.join(root, "components/site/video-modal.tsx"), "utf8"),
+    readFile(path.join(root, "components/site/closing-sections.tsx"), "utf8"),
+  ]);
+
+  assert.match(chrome, /hidden=\{!open\}/);
+  assert.match(modal, /event\.key !== "Tab"/);
+  assert.match(modal, /setAttribute\("inert"/);
+  assert.match(modal, /previous\?\.focus\(\)/);
+  assert.match(closing, /aria-hidden=\{!active\}/);
 });
 
 test("forwards progress semantics to the primitive", async () => {
