@@ -4,6 +4,32 @@ Registro de procedência das mídias usadas na apresentação comercial da Sustt
 
 ## TLC Agro
 
+### Catálogos e apresentação comercial fornecidos em 2026
+
+Arquivos-fonte fornecidos pelo responsável pelo site em 2026-09-02:
+
+- `Apresentacao Comercial TLC AGRO 2026.pdf`
+- `TLC_AGRO_APRESENTACAO_CORRIGIDA.pdf`
+- `Apresentação Tlcagro .pdf`
+
+Uso editorial: ampliação da seção TLC Agro com portfólio EcoMax, cenários de aplicação e orientação de implantação.
+Os PDFs originais foram usados apenas como fonte e não integram `public/` nem o pacote de produção. Não foi localizada
+declaração de licença pública; o uso parte do fornecimento direto dos materiais oficiais pelo responsável comercial.
+
+Derivações publicadas em `public/media/tlc-official/catalog-2026/`:
+
+- `ecomax-inseticida-hibrido.webp`: recorte da página 8 da apresentação comercial, redimensionado e convertido para WebP.
+- `aplicacao-pecuaria.webp`: recorte fotográfico da página 9, sem as alegações percentuais do slide.
+- `aplicacao-avicultura.webp`: recorte fotográfico da página 10, sem números ou promessas de resultado.
+- `aplicacao-suinocultura.webp`: recorte fotográfico da página 11, sem alegações absolutas.
+- `aplicacao-industria.webp`: recorte fotográfico da página 12, sem promessa regulatória.
+- `aplicacao-equinos.webp`: recorte fotográfico da página 13, sem promessa de prevenção ou resultado.
+
+Transformações: recorte editorial, remoção visual das caixas de alegações, redimensionamento máximo para 960 × 520 px
+nas aplicações, conversão WebP e compressão para web sem ampliação artificial. Nenhuma embalagem ou marca foi
+redesenhada. Alegações como percentuais de desempenho, raio fixo, quilos capturados, segurança absoluta ou ganhos
+produtivos não foram reproduzidas por não haver laudo ou referência técnica anexada aos materiais.
+
 ### Conjunto de produtos Ecomax
 
 Arquivo local: `public/media/tlc-official/images/ecomax-produtos-original.png` e `ecomax-produtos.webp`

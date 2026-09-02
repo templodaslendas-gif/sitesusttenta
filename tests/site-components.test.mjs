@@ -21,9 +21,12 @@ test("implements every required section", () => {
 });
 
 test("keeps TLC media inside the independent TLC section", () => {
-  assert.match(source, /TLC Agro e a linha Ecomax/);
+  assert.match(source, /Controle de moscas com estratégia de campo/);
   assert.match(source, /productVideos\.filter\(\(item\) => item\.product === "tlc"/);
   assert.match(source, /Relato publicado pela TLC Agro/);
+  assert.match(source, /Inseticida Híbrido EcoMax/);
+  assert.match(source, /Cenários rurais e agroindustriais/);
+  assert.match(source, /Produto sem planejamento não resolve a operação/);
 });
 
 test("keeps brand contexts separated and describes the Embio 6000 flow correctly", () => {
