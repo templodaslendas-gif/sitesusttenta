@@ -17,5 +17,5 @@ export function FAQ() {
 }
 
 export function FinalCTA() {
-  return <section id="contato" className="final-cta"><div className="container" data-reveal><p className="section-label">Converse com a Susttenta</p><h2>Uma recomendação coerente começa por compreender sua operação.</h2><p>Conte o tipo de instalação, o desafio observado e o destino dos dejetos ou efluentes. A Susttenta ajuda a direcionar a solução Embio adequada.</p><WhatsAppLink message={whatsappMessages.embio} ariaLabel="Iniciar atendimento sobre soluções Embio pelo WhatsApp" className="button button-primary whatsapp-pulse"><WhatsAppIcon size={20} />Falar com um especialista<ArrowRight size={18} /></WhatsAppLink></div></section>;
+  return <section id="contato" className="final-cta"><div className="container"><div className="final-cta-frame" data-reveal><div><h2>Vamos entender sua operação antes de indicar uma solução.</h2><p>Conte o tipo de instalação, o desafio observado e o destino dos dejetos ou efluentes. A Susttenta ajuda a direcionar a tecnologia Embio adequada ao seu cenário.</p></div><WhatsAppLink message={whatsappMessages.embio} ariaLabel="Iniciar atendimento sobre soluções Embio pelo WhatsApp" className="button button-primary whatsapp-pulse"><WhatsAppIcon size={20} />Falar com um especialista<ArrowRight size={18} /></WhatsAppLink></div></div></section>;
 }

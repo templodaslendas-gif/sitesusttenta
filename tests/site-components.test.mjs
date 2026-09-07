@@ -17,7 +17,7 @@ test("keeps the first viewport exclusively focused on Susttenta and Embio", asyn
 });
 
 test("implements every required section", () => {
-  for (const id of ["embio", "embiofert", "embio-3100", "embio-6000", "outras-solucoes", "tlc-agro", "pedro", "faq", "contato"]) assert.match(source, new RegExp(`id=\\"${id}\\"`));
+  for (const id of ["embio", "embiofert", "embio-3100", "embio-6000", "tlc-agro", "pedro", "faq", "contato"]) assert.match(source, new RegExp(`id=\\"${id}\\"`));
   assert.doesNotMatch(source, /BrandRepresentationCards|SolutionsCarousel|TechnicalChallenges|Testimonials/);
 });
 

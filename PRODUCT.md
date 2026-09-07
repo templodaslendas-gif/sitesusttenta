@@ -21,7 +21,8 @@ A Susttenta é a marca principal e representa prioritariamente a linha Embio com
 ## Capabilities and Constraints
 
 - Tratamento Embiofert é a principal solução comercial.
-- Embio 3100, Embio 6000, Embio 5000+ e Embio 8000 possuem aplicações distintas e exigem avaliação técnica.
+- Embio 3100 e Embio 6000 possuem aplicações distintas e exigem avaliação técnica.
+- Embio 5000+ e Embio 8000 permanecem temporariamente fora da página pública.
 - A linha Ecomax da TLC Agro é apresentada separadamente para controle estratégico de moscas.
 - O canal comercial confirmado é o WhatsApp +55 (46) 99925-9777.
 - Não inventar dosagens, resultados, prazos, credenciais, depoimentos, dados jurídicos ou garantias.

@@ -54,18 +54,18 @@ export function TlcEcomaxSection({ onOpen }: { onOpen: (item: ProductVideo) => v
       </div>
 
       <div className="container capture-story" data-reveal>
-        <div><Magnet /><span>01</span><h3>Atração</h3><p>O atrativo cria um ponto de interesse para moscas adultas na área monitorada.</p></div>
-        <div><LogIn /><span>02</span><h3>Entrada</h3><p>A geometria da armadilha permite a entrada das moscas atraídas.</p></div>
-        <div><ShieldCheck /><span>03</span><h3>Retenção</h3><p>O reservatório retém as moscas capturadas e precisa de inspeção e manejo periódicos.</p></div>
+        <div><Magnet /><h3>Atração</h3><p>O atrativo cria um ponto de interesse para moscas adultas na área monitorada.</p></div>
+        <div><LogIn /><h3>Entrada</h3><p>A geometria da armadilha permite a entrada das moscas atraídas.</p></div>
+        <div><ShieldCheck /><h3>Retenção</h3><p>O reservatório retém as moscas capturadas e precisa de inspeção e manejo periódicos.</p></div>
       </div>
 
       <div className="tlc-applications" id="tlc-aplicacoes">
         <div className="container">
           <header className="tlc-block-heading is-light" data-reveal><p className="section-label">Onde a linha pode ser aplicada</p><h3>Cenários rurais e agroindustriais</h3><p>Os materiais da TLC Agro apresentam aplicações em cinco contextos. Em todos eles, distância, quantidade e posição das armadilhas devem ser definidas após avaliação da área.</p></header>
           <div className="tlc-application-grid">
-            {tlcApplications.map((application, index) => <article key={application.title} data-reveal>
+            {tlcApplications.map((application) => <article key={application.title} data-reveal>
               <Image src={application.image} alt={application.alt} fill sizes="(max-width: 760px) 100vw, (max-width: 1020px) 50vw, 33vw" />
-              <div><span>{String(index + 1).padStart(2, "0")}</span><h4>{application.title}</h4><p>{application.description}</p></div>
+              <div><h4>{application.title}</h4><p>{application.description}</p></div>
             </article>)}
           </div>
         </div>

@@ -1,5 +1,5 @@
 /** Cloudflare Worker entry point for the vinext-starter template. */
-import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
+import { handleImageOptimization } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
 
 interface Env {
@@ -30,14 +30,27 @@ const worker = {
     const url = new URL(request.url);
 
     if (url.pathname === "/_vinext/image") {
-      const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
+      // On Cloudflare the ASSETS binding serves static files; the local Vite
+      // dev worker has none, so fall back to a same-origin fetch that hits
+      // Vite's static file server.
+      const fetchAsset = (path: string) => {
+        const assetRequest = new Request(new URL(path, request.url));
+        return env.ASSETS ? env.ASSETS.fetch(assetRequest) : fetch(assetRequest);
+      };
+
+      // The Images binding only exists on Cloudflare. Without it (local dev)
+      // skip transformation and let the handler serve the original file.
+      if (!env.IMAGES) {
+        return handleImageOptimization(request, { fetchAsset });
+      }
+
       return handleImageOptimization(request, {
-        fetchAsset: (path) => env.ASSETS.fetch(new Request(new URL(path, request.url))),
+        fetchAsset,
         transformImage: async (body, { width, format, quality }) => {
           const result = await env.IMAGES.input(body).transform(width > 0 ? { width } : {}).output({ format, quality });
           return result.response();
         },
-      }, allowedWidths);
+      });
     }
 
     return handler.fetch(request, env, ctx);

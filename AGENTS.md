@@ -34,8 +34,9 @@ Decisão registrada e implementada no commit `fc17af2`:
 - A Susttenta conduz a narrativa; a Embio é o eixo comercial principal.
 - Embio e TLC Agro **não** dividem hero, cards comparativos, metades equivalentes de seção
   nem a mesma composição visual. A seção TLC só começa após uma ruptura visual explícita.
-- Hierarquia comercial: Susttenta → Embio → Tratamento Embiofert → Embio 3100 → Embio 6000 →
-  Embio 5000+ e Embio 8000 → TLC Agro e Ecomax → atendimento de Pedro → contato pelo WhatsApp.
+- Hierarquia comercial atual: Susttenta → Embio → Tratamento Embiofert → Embio 3100 → Embio 6000 →
+  TLC Agro e Ecomax → atendimento de Pedro → contato pelo WhatsApp. Embio 5000+ e 8000 permanecem
+  fora da página até que uma futura revisão seja autorizada.
 - Ordem das seções em `docs/ARCHITECTURE.md`.
 
 ## Preservar sempre

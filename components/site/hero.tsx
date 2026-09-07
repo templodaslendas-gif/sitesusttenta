@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { ArrowDown, ArrowRight, BadgeCheck, Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { WhatsAppIcon, WhatsAppLink } from "./site-chrome";
@@ -40,17 +39,11 @@ export function Hero() {
           <WhatsAppLink message={whatsappMessages.embio} ariaLabel="Falar com Pedro sobre as soluções Embio pelo WhatsApp" className="button button-yellow whatsapp-pulse"><WhatsAppIcon size={20} />Falar com Pedro<ArrowRight size={18} /></WhatsAppLink>
           <a className="button button-ghost" href="#embio">Conhecer as soluções<ArrowDown size={18} /></a>
         </div>
-        <a className="hero-authority" href="#pedro" aria-label="Conhecer a experiência de Pedro Luís Schmidt">
-          <Image src="/media/embio-2026/images/pedro-luis-schmidt.webp" alt="Pedro Luís Schmidt, responsável técnico pela Susttenta" width={62} height={62} priority />
-          <span><strong>Pedro Luís Schmidt</strong><small>28 anos de experiência em assistência técnica na suinocultura</small></span>
-        </a>
       </div>
       <div className="hero-video-card" data-reveal>
         <video ref={videoRef} autoPlay muted loop playsInline preload="metadata" poster="/media/embio-2026/posters/embiofert-propulsor-em-operacao.webp" aria-label="Propulsor Embio em funcionamento em uma lagoa de dejetos" onPlay={() => setIsPlaying(true)} onPause={() => setIsPlaying(false)}>
           <source src="/media/embio-2026/videos/embiofert-propulsor-em-operacao.mp4" type="video/mp4" />
         </video>
-        <div className="hero-video-shade" aria-hidden="true" />
-        <div className="hero-video-caption"><Image src="/media/embio-official/embio-logo-original.png" alt="Embio" width={96} height={38} /><span>Tratamento Embiofert em operação real</span></div>
         <button type="button" className="hero-video-control" onClick={togglePlayback} aria-label={isPlaying ? "Pausar vídeo da hero" : "Reproduzir vídeo da hero"}>{isPlaying ? <Pause /> : <Play fill="currentColor" />}</button>
       </div>
     </div>
