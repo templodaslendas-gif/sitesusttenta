@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 
@@ -58,6 +58,37 @@ test("presents Embio 3100 and Embio 6000 as two separate sections", async () => 
   assert.match(solutions, /não é a principal indicação quando o dejeto segue diretamente para o biodigestor/);
   assert.match(solutions, /não representa garantia de aumento da produção de biogás/);
   assert.doesNotMatch(solutions, /Embio 5000\+|Embio 8000/);
+});
+
+test("presents the Embio bottles as trimmed transparent artwork on a coherent stage", async () => {
+  const [sections, css] = await Promise.all([
+    readFile(`${root}/components/site/embio-product-sections.tsx`, "utf8"),
+    readFile(`${root}/app/globals.css`, "utf8"),
+  ]);
+  assert.match(sections, /embio-3100-frasco\.webp/);
+  assert.match(sections, /embio-6000-frasco\.webp/);
+  assert.doesNotMatch(sections, /embio-official\/embio-3100\.webp|embio-official\/embio-6000\.webp/);
+  assert.match(sections, /embio-product-stage/);
+  assert.match(css, /\.embio-product-stage::after/);
+  assert.match(css, /\.embio-product-stage::before/);
+  await access(`${root}/public/media/embio-official/embio-3100-frasco.webp`);
+  await access(`${root}/public/media/embio-official/embio-6000-frasco.webp`);
+});
+
+test("drives video proportion from media data instead of a rigid height", async () => {
+  const [data, gallery, inline] = await Promise.all([
+    readFile(`${root}/components/site/site-data.ts`, "utf8"),
+    readFile(`${root}/components/site/product-video-gallery.tsx`, "utf8"),
+    readFile(`${root}/components/site/inline-video.tsx`, "utf8"),
+  ]);
+  assert.match(data, /aspectRatio\?: string/);
+  assert.match(data, /"9 \/ 16"/);
+  assert.match(data, /"16 \/ 9"/);
+  assert.match(inline, /aspectRatio: item\.aspectRatio/);
+  assert.match(gallery, /variant\?: Variant/);
+  const sections = await readFile(`${root}/components/site/embio-product-sections.tsx`, "utf8");
+  assert.match(sections, /variant="stack"/);
+  assert.match(sections, /variant="duo"/);
 });
 
 test("gives every video a visible play affordance and inline playback", async () => {

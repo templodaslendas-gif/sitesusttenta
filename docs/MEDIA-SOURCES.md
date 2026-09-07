@@ -193,6 +193,28 @@ Uso no site: visão geral Embio, seção exclusiva Embio 6000 e posters de víde
 Transformações realizadas: versão WebP otimizada já existente, preservada
 Observações sobre autorização: mídia obtida do site oficial da marca representada; não foi localizada declaração de licença pública.
 
+### Frascos Embio 3100 e 6000 com fundo removido (2026-09-07)
+
+Data da derivação: 2026-09-07. Objetivo: corrigir a apresentação em que o frasco parecia flutuar dentro de um
+retângulo branco, gerando arte de produto com fundo transparente apoiada em um palco com base e sombra de contato
+construídos em CSS (nenhuma planta, animal ou cenário adicionado).
+
+- Arquivo original: `public/media/embio-official/embio-3100.webp` (900 × 900, fundo branco opaco, `yuv420p`).
+  Arquivo derivado: `public/media/embio-official/embio-3100-frasco.webp` (334 × 792, RGBA com transparência).
+- Arquivo original: `public/media/embio-official/embio-6000.webp` (948 × 1660, fundo branco opaco, `yuv420p`).
+  Arquivo derivado: `public/media/embio-official/embio-6000-frasco.webp` (612 × 1376, RGBA com transparência).
+
+Método de remoção de fundo: recorte **determinístico**, sem ferramenta generativa. Segmentação por preenchimento
+a partir das bordas (flood-fill / rotulagem de componentes conectados sobre os pixels quase-brancos e neutros que
+tocam a moldura), rampa de opacidade de ~2 px na borda para eliminar serrilhado e halo branco, leve suavização
+gaussiana (0,8 px) do canal alfa e recorte na caixa do produto com margem de 2 %. Apenas o canal alfa foi alterado —
+os pixels RGB do produto (tampa, cores, rótulo, textos e proporções) permanecem **idênticos** ao original; nenhuma
+palavra do rótulo foi modificada, nada foi redesenhado ou apagado.
+
+Compressão: WebP com alpha, `quality` 90, `method` 6 — 42 KB (3100) e 95 KB (6000), sem perda visual relevante.
+Uso no site: seções independentes Embio 3100 (`components/site/embio-product-sections.tsx`) e Embio 6000. Os arquivos
+originais opacos foram preservados no repositório como referência.
+
 ## Fontes técnicas consultadas
 
 - Embio: `https://embio.com.br/`, `https://embio.com.br/tratamento-embiofert/`, `https://embio.com.br/propulsor-embio/`, `https://embio.com.br/embio-3100/`, `https://embio.com.br/embio-6000/`, `https://embio.com.br/embio-5000-plus/` e `https://embio.com.br/embio-8000/`.
