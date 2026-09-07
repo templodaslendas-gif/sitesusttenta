@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { FAQ, FinalCTA, PedroAuthority } from "@/components/site/closing-sections";
 import { EmbioOverview } from "@/components/site/embio-overview";
-import { Embio3100Section, Embio6000Section } from "@/components/site/embio-product-sections";
+import { EmbioSolutionsSection } from "@/components/site/embio-product-sections";
 import { EmbiofertSection } from "@/components/site/embiofert-section";
 import { Hero } from "@/components/site/hero";
 import { Footer, Header } from "@/components/site/site-chrome";
@@ -20,5 +20,5 @@ export function SiteClient() {
     elements.forEach((element) => observer.observe(element));
     return () => { observer.disconnect(); document.documentElement.classList.remove("reveal-enabled"); };
   }, []);
-  return <><Header /><main><Hero /><EmbioOverview onOpen={setActiveMedia} /><EmbiofertSection onOpen={setActiveMedia} /><Embio3100Section onOpen={setActiveMedia} /><Embio6000Section onOpen={setActiveMedia} /><TlcEcomaxSection onOpen={setActiveMedia} /><PedroAuthority /><FAQ /><FinalCTA /></main><Footer /><VideoModal item={activeMedia} onClose={closeModal} /></>;
+  return <><Header /><main><Hero /><EmbiofertSection onOpen={setActiveMedia} /><EmbioOverview onOpen={setActiveMedia} /><EmbioSolutionsSection onOpen={setActiveMedia} /><TlcEcomaxSection onOpen={setActiveMedia} /><PedroAuthority /><FAQ /><FinalCTA /></main><Footer /><VideoModal item={activeMedia} onClose={closeModal} /></>;
 }
