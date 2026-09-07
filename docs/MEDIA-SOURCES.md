@@ -135,7 +135,8 @@ Transformações das imagens: retirada de metadados, redimensionamento sem ampli
 #### Vídeos publicados
 
 - `videos/embio-tecnologia-e-laboratorio.mp4`: derivado de `WhatsApp Video 2026-09-02 at 15.32.20.mp4`; estrutura de desenvolvimento, laboratório, fabricação e atuação de campo. Fonte sem trilha de áudio.
-- `videos/embiofert-propulsor-em-operacao.mp4`: derivado de `WhatsApp Video 2026-09-02 at 15.35.12.mp4`; Propulsor Embio em operação real. Usado também na hero, sem áudio e com controle de pausa.
+- `videos/embiofert-propulsor-em-operacao.mp4`: derivado de `WhatsApp Video 2026-09-02 at 15.35.12.mp4`; Propulsor Embio em operação real. Preservado intacto para uso técnico e reproduzido inline na seção Embiofert, sem áudio.
+- `videos/embiofert-propulsor-hero.mp4` e `posters/embiofert-propulsor-hero.webp`: derivação exclusiva para o fundo da hero, gerada localmente com FFmpeg a partir de `videos/embiofert-propulsor-em-operacao.mp4`. Transformação: recorte `crop=1280:540:0:0` removendo a faixa inferior de legenda queimada na gravação (a legenda "A lagoa passa a respirar…" não pôde ser ocultada só por enquadramento sem cortar o Propulsor), H.264 `high`/`yuv420p`, CRF 27 com `maxrate` 900k, sem áudio, `+faststart`. O vídeo original permanece inalterado. Resultado ~3,4 MB, decorativo, automático, mudo, em loop e com controle de pausa acessível oculto até o foco.
 - `videos/embiofert-relato-de-campo.mp4`: derivado de `WhatsApp Video 2026-09-02 at 15.40.30.mp4`; relato fornecido sobre uma operação com Tratamento Embiofert.
 - `videos/embiofert-aproveitamento-agronomico.mp4`: derivado de `WhatsApp Video 2026-09-02 at 15.40.30 (2).mp4`; relato sobre manejo do dejeto tratado e aproveitamento de nutrientes.
 - `videos/embio-6000-relato-biodigestor.mp4`: derivado de `WhatsApp Video 2026-09-02 at 15.40.31 (1).mp4`; experiência em propriedade ligada à biodigestão.

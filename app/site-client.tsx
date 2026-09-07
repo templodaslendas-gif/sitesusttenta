@@ -1,18 +1,15 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect } from "react";
 import { FAQ, FinalCTA, PedroAuthority } from "@/components/site/closing-sections";
 import { EmbioOverview } from "@/components/site/embio-overview";
-import { EmbioSolutionsSection } from "@/components/site/embio-product-sections";
+import { Embio3100Section, Embio6000Section } from "@/components/site/embio-product-sections";
 import { EmbiofertSection } from "@/components/site/embiofert-section";
 import { Hero } from "@/components/site/hero";
 import { Footer, Header } from "@/components/site/site-chrome";
 import { TlcEcomaxSection } from "@/components/site/tlc-section";
-import { VideoModal, type MediaItem } from "@/components/site/video-modal";
 
 export function SiteClient() {
-  const [activeMedia, setActiveMedia] = useState<MediaItem | null>(null);
-  const closeModal = useCallback(() => setActiveMedia(null), []);
   useEffect(() => {
     document.documentElement.classList.add("reveal-enabled");
     const elements = document.querySelectorAll<HTMLElement>("[data-reveal]");
@@ -20,5 +17,5 @@ export function SiteClient() {
     elements.forEach((element) => observer.observe(element));
     return () => { observer.disconnect(); document.documentElement.classList.remove("reveal-enabled"); };
   }, []);
-  return <><Header /><main><Hero /><EmbiofertSection onOpen={setActiveMedia} /><EmbioOverview onOpen={setActiveMedia} /><EmbioSolutionsSection onOpen={setActiveMedia} /><TlcEcomaxSection onOpen={setActiveMedia} /><PedroAuthority /><FAQ /><FinalCTA /></main><Footer /><VideoModal item={activeMedia} onClose={closeModal} /></>;
+  return <><Header /><main><Hero /><EmbiofertSection /><EmbioOverview /><Embio3100Section /><Embio6000Section /><TlcEcomaxSection /><PedroAuthority /><FAQ /><FinalCTA /></main><Footer /></>;
 }

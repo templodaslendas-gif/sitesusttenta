@@ -44,17 +44,17 @@ test("emits the site's animation and accessibility safeguards", async () => {
   assert.match(css, /prefers-reduced-motion:\s*reduce/);
 });
 
-test("keeps closed navigation out of tab order and constrains modal focus", async () => {
-  const [chrome, modal, closing] = await Promise.all([
+test("keeps closed navigation out of tab order and plays video inline without a modal", async () => {
+  const [chrome, inline, closing] = await Promise.all([
     readFile(path.join(root, "components/site/site-chrome.tsx"), "utf8"),
-    readFile(path.join(root, "components/site/video-modal.tsx"), "utf8"),
+    readFile(path.join(root, "components/site/inline-video.tsx"), "utf8"),
     readFile(path.join(root, "components/site/closing-sections.tsx"), "utf8"),
   ]);
 
   assert.match(chrome, /hidden=\{!open\}/);
-  assert.match(modal, /event\.key !== "Tab"/);
-  assert.match(modal, /setAttribute\("inert"/);
-  assert.match(modal, /previous\?\.focus\(\)/);
+  assert.doesNotMatch(inline, /role="dialog"|aria-modal|setAttribute\("inert"/);
+  assert.match(inline, /<video/);
+  assert.match(inline, /aria-label=\{`\$\{playLabel\}: \$\{item\.title\}`\}/);
   assert.match(closing, /aria-hidden=\{!active\}/);
 });
 

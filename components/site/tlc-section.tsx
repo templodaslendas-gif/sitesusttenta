@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ArrowRight, ClipboardCheck, LogIn, Magnet, MapPinned, RefreshCw, ShieldCheck } from "lucide-react";
 import { ProductVideoGallery } from "./product-video-gallery";
-import { productVideos, type ProductVideo } from "./site-data";
+import { productVideos } from "./site-data";
 import { WhatsAppLink } from "./site-chrome";
 import { whatsappMessages } from "./whatsapp";
 
@@ -19,19 +19,24 @@ const tlcApplications = [
   { title: "Haras e equinos", description: "Estábulos, baias e áreas externas onde o conforto dos animais depende de manejo consistente.", image: "/media/tlc-official/catalog-2026/aplicacao-equinos.webp", alt: "Equinos em estábulo representando aplicações da linha EcoMax" },
 ] as const;
 
-export function TlcEcomaxSection({ onOpen }: { onOpen: (item: ProductVideo) => void }) {
+export function TlcEcomaxSection() {
   const tlcVideos = productVideos.filter((item) => item.product === "tlc");
 
   return (
     <section id="tlc-agro" className="tlc-section">
-      <div className="brand-transition" aria-hidden="true"><span>Uma linha complementar, uma apresentação independente</span></div>
+      <div className="brand-transition" aria-hidden="true"><span>LINHA COMPLEMENTAR AO CONTROLE IMEDIATO DE MOSCAS</span></div>
+
+      <div className="tlc-brand-band" data-reveal>
+        <div className="container">
+          <span className="tlc-brand-lockup"><Image src="/media/tlc-official/images/tlc-logo-original.svg" alt="TLC Agro" width={475} height={136} /></span>
+          <p className="section-label">Linha complementar representada pela Susttenta</p>
+          <h2>Controle de moscas com estratégia de campo</h2>
+          <p className="tlc-brand-lead">Linha EcoMax para captura, monitoramento e manejo complementar</p>
+        </div>
+      </div>
 
       <div className="container tlc-intro">
         <div data-reveal>
-          <Image className="tlc-section-logo" src="/media/tlc-official/images/tlc-logo-original.svg" alt="TLC Agro" width={170} height={70} />
-          <p className="section-label">Linha complementar representada pela Susttenta</p>
-          <h2>Controle de moscas com estratégia de campo</h2>
-          <p className="lead">Linha EcoMax para captura, monitoramento e manejo complementar</p>
           <p>A Susttenta orienta a escolha e o posicionamento das soluções TLC Agro de acordo com o ambiente, a origem da pressão de moscas e a rotina da propriedade ou indústria. O trabalho combina produto, leitura do local, acompanhamento e boas práticas de higiene.</p>
           <div className="use-list">{["Granjas", "Currais", "Estábulos", "Haras", "Confinamentos", "Indústrias", "Áreas externas"].map((place) => <span key={place}>{place}</span>)}</div>
           <WhatsAppLink message={whatsappMessages.ecomax} ariaLabel="Conhecer a linha Ecomax pelo WhatsApp" className="button button-dark whatsapp-pulse">Falar sobre a linha Ecomax<ArrowRight size={18} /></WhatsAppLink>
@@ -83,7 +88,7 @@ export function TlcEcomaxSection({ onOpen }: { onOpen: (item: ProductVideo) => v
 
       <div className="container tlc-media-section">
         <header className="video-block-heading" data-reveal><p className="section-label">Materiais oficiais TLC Agro</p><h3>Veja a montagem, o funcionamento e relatos publicados</h3><p>Os vídeos abaixo foram publicados pela fabricante. Os participantes não são apresentados como clientes da Susttenta e não recebem identificação ou resultados que não estejam confirmados na fonte.</p></header>
-        <ProductVideoGallery items={tlcVideos} onOpen={onOpen} />
+        <ProductVideoGallery items={tlcVideos} />
         <div className="tlc-closing-cta" data-reveal><div><strong>Quer dimensionar a linha EcoMax para sua operação?</strong><span>Envie o tipo de atividade e o principal ponto de infestação para uma orientação inicial.</span></div><WhatsAppLink message={whatsappMessages.ecomax} ariaLabel="Falar sobre a linha Ecomax com a Susttenta pelo WhatsApp" className="button button-dark whatsapp-pulse">Falar com a Susttenta<ArrowRight size={18} /></WhatsAppLink></div>
       </div>
     </section>

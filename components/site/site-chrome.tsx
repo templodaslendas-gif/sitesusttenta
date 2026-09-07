@@ -34,14 +34,14 @@ export function Footer() {
   return <>
     <footer className="site-footer">
       <div className="container footer-grid">
-        <div className="footer-summary"><a className="footer-logo" href="#inicio"><Image src="/favicon-master-1024.png" alt="" width={52} height={52} /><Image src="/logo-susttenta-wordmark.png" alt="Susttenta" width={164} height={23} /></a><p>Representante Embio com orientação para tratamento biológico, ambiência, biodigestores e efluentes.</p><a className="footer-phone" href="tel:+5546999259777">+55 (46) 99925-9777</a></div>
+        <div className="footer-summary"><a className="footer-logo" href="#inicio"><Image src="/favicon-master-1024.png" alt="" width={76} height={76} /><Image src="/logo-susttenta-wordmark.png" alt="Susttenta" width={248} height={35} /></a><p>Representante autorizado Embio, com orientação para tratamento biológico de dejetos, ambiência, biodigestores e efluentes.</p><a className="footer-phone" href="tel:+5546999259777">+55 (46) 99925-9777</a></div>
         <div><strong>Produtos Embio</strong><a href="#embiofert">Tratamento Embiofert</a><a href="#embio-3100">Embio 3100</a><a href="#embio-6000">Embio 6000</a></div>
         <div><strong>TLC Agro e Ecomax</strong><a href="#tlc-agro">Conhecer a linha Ecomax</a><WhatsAppLink message={whatsappMessages.ecomax} ariaLabel="Falar sobre a linha Ecomax pelo WhatsApp">WhatsApp Ecomax</WhatsAppLink><strong className="footer-subheading">Acesso rápido</strong><a href="#pedro">Sobre Pedro</a><a href="#faq">Perguntas frequentes</a></div>
         <div><strong>Privacidade</strong><Link href="/privacidade">Política de Privacidade</Link><Link href="/cookies">Política de Cookies</Link><Link href="/termos">Termos de Uso</Link><button type="button" onClick={manageCookies}>Gerenciar preferências</button></div>
       </div>
-      <div className="container footer-bottom"><span>© 2026 Susttenta. Todos os direitos reservados.</span><a href="https://novositeffrdobrasil.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Desenvolvido por FFR do Brasil Technology, Brasil"><Image src="/media/brand/br-flag.svg" alt="" width={22} height={15} />Desenvolvido por FFR do Brasil Technology</a></div>
+      <div className="container footer-bottom"><span>© 2026 Susttenta. Todos os direitos reservados.</span><a href="https://novositeffrdobrasil.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Desenvolvido por FFR do Brasil Technology, Brasil"><Image src="/media/brand/br-flag.svg" alt="" width={34} height={23} />Desenvolvido por FFR do Brasil Technology</a></div>
     </footer>
-    <WhatsAppLink message={whatsappMessages.embio} ariaLabel="Falar com a Susttenta pelo WhatsApp" className="floating-whatsapp whatsapp-pulse"><WhatsAppIcon size={29} /></WhatsAppLink>
+    <WhatsAppLink message={whatsappMessages.embio} ariaLabel="Falar com a Susttenta pelo WhatsApp" className="floating-whatsapp whatsapp-pulse"><WhatsAppIcon size={32} /></WhatsAppLink>
     <CookieConsent />
   </>;
 }
