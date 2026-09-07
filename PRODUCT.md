@@ -33,7 +33,7 @@ Susttenta como marca principal; verde como cor dominante, amarelo como destaque,
 
 ## Evidence on Hand
 
-Imagens oficiais Embio em `public/media/embio-official/` e materiais oficiais TLC Agro documentados em `docs/MEDIA-SOURCES.md`. Não há foto profissional confirmada de Pedro nem vídeos oficiais disponíveis para as seções Embio.
+Imagens e vídeos Embio fornecidos diretamente pelo responsável comercial estão organizados em `public/media/embio-2026/`, incluindo tecnologia e laboratório, operação do Tratamento Embiofert, relatos de campo do Embiofert, Embio 3100 e Embio 6000 e materiais de apoio dos produtos. O retrato de Pedro deriva da peça oficial fornecida para sua participação técnica no Espaço Impulso. Toda procedência e transformação está registrada em `docs/MEDIA-SOURCES.md`.
 
 ## Product Principles
 

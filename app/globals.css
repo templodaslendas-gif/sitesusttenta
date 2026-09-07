@@ -68,3 +68,80 @@ html{scroll-padding-top:24px}
 @media(max-width:1020px){.tlc-product-grid{grid-template-columns:1fr 1fr}.tlc-product-grid article:last-child{grid-column:1/-1}.tlc-product-grid article:last-child{display:grid;grid-template-columns:1fr 1fr}.tlc-application-grid{grid-template-columns:1fr 1fr}.tlc-application-grid article,.tlc-application-grid article:nth-child(4){grid-column:auto}.tlc-application-grid article:last-child{grid-column:1/-1}.tlc-planning{gap:38px}}
 @media(max-width:760px){.tlc-product-grid{grid-template-columns:1fr}.tlc-product-grid article:last-child{grid-column:auto;display:block}.tlc-card-media{min-height:285px}.tlc-application-grid{grid-template-columns:1fr}.tlc-application-grid article,.tlc-application-grid article:nth-child(4),.tlc-application-grid article:last-child{grid-column:auto;min-height:340px}.tlc-planning{grid-template-columns:1fr;padding:28px 20px}.tlc-closing-cta{align-items:stretch;flex-direction:column}.tlc-closing-cta .button{width:100%}}
 @media(prefers-reduced-motion:reduce){.tlc-product-grid article,.tlc-application-grid article img{transition:none!important;transform:none!important}}
+
+/* Embio 2026 — mídia real, prova de campo e autoridade técnica */
+.embio-video-hero .hero-grid{grid-template-columns:.92fr 1.08fr;gap:54px}
+.hero-video-card{position:relative;min-width:0;aspect-ratio:16/11;overflow:hidden;border:1px solid rgba(6,61,36,.14);border-radius:34px 6px 34px 6px;background:#0b2f1c;box-shadow:0 30px 70px rgba(16,60,34,.2)}
+.hero-video-card video{width:100%;height:100%;display:block;object-fit:cover}
+.hero-video-shade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(3,27,15,.72))}
+.hero-video-caption{position:absolute;z-index:2;left:22px;right:74px;bottom:20px;display:flex;align-items:center;gap:14px;color:#fff;font-size:.76rem;font-weight:850;line-height:1.35}
+.hero-video-caption img{padding:7px 9px;border-radius:8px;background:#fff;object-fit:contain}
+.hero-video-control{position:absolute;z-index:3;right:18px;bottom:18px;width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.38);border-radius:50%;background:rgba(3,27,15,.72);color:#fff;cursor:pointer;backdrop-filter:blur(8px)}
+.hero-video-control svg{width:19px;height:19px}
+.hero-authority{width:min(430px,100%);min-height:72px;display:flex;align-items:center;gap:13px;margin-top:26px;padding:8px 14px 8px 8px;border:1px solid rgba(6,61,36,.13);border-radius:999px;background:rgba(255,255,255,.68);transition:transform .2s,background .2s}
+.hero-authority:hover{transform:translateY(-2px);background:#fff}
+.hero-authority img{width:54px;height:54px;border-radius:50%;object-fit:cover;object-position:center 18%;background:#dfeadf}
+.hero-authority span,.hero-authority strong,.hero-authority small{display:block}
+.hero-authority strong{font-size:.84rem}
+.hero-authority small{max-width:300px;margin-top:3px;color:var(--muted);font-size:.69rem;line-height:1.35}
+.embio-overview-photo{min-height:400px;background:#eaf1e7}
+.embio-overview-photo img{width:100%!important;height:100%!important;padding:0!important;object-fit:cover!important;filter:none!important;transform:none!important}
+.embio-technology-story{display:grid;grid-template-columns:1.08fr .92fr;gap:34px;align-items:stretch;margin-top:64px;padding:24px;border:1px solid var(--line);border-radius:26px;background:#f4f7f1}
+.embio-technology-story>div:first-child{position:relative;min-height:430px;overflow:hidden;border-radius:18px;background:#fff}
+.embio-technology-story>div:first-child img{width:100%;height:100%;object-fit:cover}
+.embio-technology-story>div:last-child{padding:24px 18px;display:flex;flex-direction:column;justify-content:center}
+.embio-technology-story h3{margin:0;font-size:clamp(1.9rem,3vw,3.1rem);line-height:1.02;letter-spacing:-.04em}
+.embio-technology-story>div:last-child>p:not(.section-label){color:var(--muted);line-height:1.65}
+.embio-technology-story .product-video-grid{margin-top:14px}
+.embio-technology-story .product-video-grid article{display:grid;grid-template-columns:42% 1fr}
+.embio-technology-story .video-available>button{height:100%;aspect-ratio:auto;min-height:180px}
+.embio-technology-story .product-video-grid article>div:last-child{padding:18px}
+.embiofert-official-media{min-height:0!important;display:block!important;overflow:hidden;border:1px solid rgba(255,255,255,.15);border-radius:24px 4px 24px 4px;background:#fff}
+.embiofert-official-media>img{width:100%!important;height:auto!important;display:block;filter:none!important}
+.embiofert-official-media>span{left:18px!important;bottom:18px!important;background:var(--forest)!important;color:#fff}
+.product-stage-evidence,.product-stage-presentation{min-height:410px;padding:62px 22px 46px;background:#fff}
+.product-stage-evidence img,.product-stage-presentation img{width:100%;max-width:100%;max-height:none;filter:none;object-fit:contain}
+.product-stage-evidence small{position:absolute;left:22px;right:22px;bottom:16px;color:var(--muted);font-size:.65rem;line-height:1.35}
+.embio-6000-section .product-stage-presentation{background:#eef6fb}
+.other-product-type{min-height:310px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px;background:linear-gradient(145deg,#e7f1e3,#d3e7ce);color:var(--forest)}
+.other-product-type span,.other-product-type strong,.other-product-type small{display:block}
+.other-product-type span{font-size:.9rem!important;letter-spacing:.16em!important}
+.other-product-type strong{font-size:clamp(4.2rem,7vw,6.8rem);line-height:.9;letter-spacing:-.08em}
+.other-product-type small{margin-top:18px;font-weight:750}
+.other-product-image-new{background:#fff}
+.other-product-image-new img{padding:0!important;object-fit:contain!important;mix-blend-mode:multiply}
+.pedro-portrait{position:relative;min-height:560px;margin:0;overflow:hidden;border:1px solid rgba(255,255,255,.2);border-radius:150px 150px 24px 24px;background:#dce9df;box-shadow:0 28px 60px rgba(0,0,0,.22)}
+.pedro-portrait>img{object-fit:cover;object-position:center 20%}
+.pedro-portrait figcaption{position:absolute;z-index:2;left:18px;right:18px;bottom:18px;padding:16px 18px;border-radius:13px;background:rgba(6,61,36,.9);backdrop-filter:blur(8px)}
+.pedro-portrait figcaption span,.pedro-portrait figcaption small{display:block}
+.pedro-portrait figcaption span{font-size:1rem;font-weight:900}
+.pedro-portrait figcaption small{margin-top:4px;color:#c9d8cf}
+.embiofert-primary .product-video-grid article{border-color:rgba(255,255,255,.2)}
+
+@media(max-width:1020px){
+  .embio-video-hero .hero-grid{gap:34px}
+  .embio-technology-story{grid-template-columns:1fr}
+  .embio-technology-story>div:first-child{min-height:360px}
+}
+@media(max-width:760px){
+  .embio-video-hero .hero-grid{grid-template-columns:1fr}
+  .hero-video-card{aspect-ratio:16/12;border-radius:24px 4px 24px 4px}
+  .hero-video-caption{left:14px;bottom:14px}
+  .hero-video-control{right:12px;bottom:12px}
+  .hero-authority{border-radius:18px}
+  .embio-overview-photo{min-height:270px}
+  .embio-technology-story{margin-top:44px;padding:14px}
+  .embio-technology-story>div:first-child{min-height:250px}
+  .embio-technology-story>div:last-child{padding:18px 6px 8px}
+  .embio-technology-story .product-video-grid article{grid-template-columns:1fr}
+  .embio-technology-story .video-available>button{min-height:210px}
+  .product-stage-evidence,.product-stage-presentation{min-height:320px;padding-inline:12px}
+  .pedro-portrait{min-height:460px;border-radius:110px 110px 20px 20px}
+}
+@media(max-width:380px){
+  .hero-video-caption span{display:none}
+  .hero-authority img{width:48px;height:48px}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-authority{transition:none}
+}

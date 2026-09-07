@@ -116,6 +116,42 @@ Observações sobre autorização: publicado diretamente no domínio oficial da 
 
 ## Embio
 
+### Pacote oficial fornecido em setembro de 2026
+
+Arquivos-fonte fornecidos diretamente pelo responsável pelo site em 2026-09-07. Os originais de WhatsApp foram usados somente como fonte de trabalho e não integram o pacote público. O site publica derivações com nomes descritivos em `public/media/embio-2026/`.
+
+#### Imagens publicadas
+
+- `images/embio-apresentacao.webp`: derivada de `WhatsApp Image 2026-09-02 at 15.32.23.jpeg`; visão institucional da Embio em propriedades rurais e sistemas de produção animal.
+- `images/embio-tecnologia.webp`: derivada de `WhatsApp Image 2026-09-02 at 15.32.23 (1).jpeg`; síntese da ação biológica e mecânica no manejo da matéria orgânica.
+- `images/embiofert-tratamento-integrado.webp`: derivada de `WhatsApp Image 2026-09-02 at 15.34.18.jpeg`; apresentação do Embio 3000 integrado ao Propulsor Embio.
+- `images/embio-3100-comparativo-ambiencia.webp`: derivada de `WhatsApp Image 2026-09-02 at 15.40.32 (1).jpeg`; registro comparativo de medidores apresentado pela Embio, exibido com ressalva sobre instalação, manejo e condições de medição.
+- `images/embio-6000-biodigestao.webp`: derivada de `WhatsApp Image 2026-09-02 at 15.40.30.jpeg`; apresentação do produto para sistemas ligados à biodigestão.
+- `images/embio-8000-produto.webp`: derivada de `WhatsApp Image 2026-09-02 at 15.40.33.jpeg`; embalagem fornecida do Embio 8000.
+- `images/pedro-luis-schmidt.webp`: recorte sem alteração facial da peça `e6a8f4c1-43aa-416c-8bd4-651794d6be4b.png`; usado na hero e na seção de atendimento. A peça identifica Pedro Luís Schmidt como técnico da Susttenta Soluções Inteligentes.
+
+Transformações das imagens: retirada de metadados, redimensionamento sem ampliação relevante e conversão WebP. Os arquivos de apresentação foram preservados como materiais editoriais; nenhum rótulo, embalagem, medição ou rosto foi redesenhado.
+
+#### Vídeos publicados
+
+- `videos/embio-tecnologia-e-laboratorio.mp4`: derivado de `WhatsApp Video 2026-09-02 at 15.32.20.mp4`; estrutura de desenvolvimento, laboratório, fabricação e atuação de campo. Fonte sem trilha de áudio.
+- `videos/embiofert-propulsor-em-operacao.mp4`: derivado de `WhatsApp Video 2026-09-02 at 15.35.12.mp4`; Propulsor Embio em operação real. Usado também na hero, sem áudio e com controle de pausa.
+- `videos/embiofert-relato-de-campo.mp4`: derivado de `WhatsApp Video 2026-09-02 at 15.40.30.mp4`; relato fornecido sobre uma operação com Tratamento Embiofert.
+- `videos/embiofert-aproveitamento-agronomico.mp4`: derivado de `WhatsApp Video 2026-09-02 at 15.40.30 (2).mp4`; relato sobre manejo do dejeto tratado e aproveitamento de nutrientes.
+- `videos/embio-6000-relato-biodigestor.mp4`: derivado de `WhatsApp Video 2026-09-02 at 15.40.31 (1).mp4`; experiência em propriedade ligada à biodigestão.
+- `videos/embio-6000-relato-ambiencia.mp4`: derivado de `WhatsApp Video 2026-09-02 at 15.40.32.mp4`; relato de campo sobre ambiência e manejo com Embio 6000.
+- `videos/embio-3100-relato-ambiencia.mp4`: derivado de `WhatsApp Video 2026-09-02 at 15.40.33.mp4`; relato sobre ambiência no barracão com Embio 3100.
+
+Transformações dos vídeos: H.264, pixel format `yuv420p`, áudio AAC mono quando existente, resolução máxima de 1280 px, redução de quadros quando necessária e `faststart`. Posters WebP foram extraídos dos próprios vídeos e estão em `public/media/embio-2026/posters/`. Os relatos são apresentados como experiências individuais fornecidas pela Embio, nunca como garantia de resultado.
+
+#### Materiais auditados e não publicados
+
+- `WhatsApp Video 2026-09-02 at 15.34.11.mp4`: tela curta de benefícios, redundante com o conteúdo textual existente.
+- `WhatsApp Video 2026-09-02 at 15.40.30 (1).mp4` e `WhatsApp Video 2026-09-02 at 15.40.31.mp4`: relatos relacionados a solo/culturas, fora do foco principal atual do site Susttenta.
+- `WhatsApp Image 2026-09-02 at 15.40.32.jpeg`: composição alternativa do Embiofert não usada por apresentar fundo quadriculado incorporado à imagem.
+
+Esses materiais não foram descartados da origem fornecida; apenas ficaram fora do bundle público para evitar duplicação, excesso de peso e dispersão comercial.
+
 Arquivo local: `public/media/embio-official/embio-logo-original.png`
 Tipo: imagem PNG original
 Produto: marca Embio

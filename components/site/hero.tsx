@@ -1,34 +1,57 @@
+"use client";
+
 import Image from "next/image";
-import { ArrowDown, ArrowRight, BadgeCheck } from "lucide-react";
+import { ArrowDown, ArrowRight, BadgeCheck, Pause, Play } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { WhatsAppIcon, WhatsAppLink } from "./site-chrome";
 import { whatsappMessages } from "./whatsapp";
 
-const heroMedia = {
-  // Substituir por vídeo horizontal oficial, poster e versão mobile quando forem fornecidos.
-  videoSrc: null,
-  posterSrc: null,
-  fallbackImage: "/media/embio-official/embiofert.webp",
-} as const;
-
 export function Hero() {
-  return <section id="inicio" className="hero embio-hero">
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  useEffect(() => {
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    videoRef.current?.pause();
+  }, []);
+
+  const togglePlayback = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (video.paused) {
+      void video.play();
+      setIsPlaying(true);
+    } else {
+      video.pause();
+      setIsPlaying(false);
+    }
+  };
+
+  return <section id="inicio" className="hero embio-hero embio-video-hero">
     <div className="hero-orbit" aria-hidden="true" />
     <div className="container hero-grid">
       <div className="hero-copy" data-reveal>
         <div className="partner-seal"><BadgeCheck size={18} /><span>REPRESENTANTE EMBIO</span></div>
-        <p className="hero-kicker">Susttenta · orientação para o campo e a agroindústria</p>
-        <h1>Tecnologia Embio com orientação especializada para o campo</h1>
-        <p className="hero-summary">A Susttenta oferece atendimento consultivo para aplicação das soluções Embio em propriedades rurais, granjas, sistemas de tratamento, instalações com biodigestor e operações agroindustriais.</p>
-        <p className="hero-signature">Biotecnologia aplicada para reduzir perdas, aumentar a eficiência e ampliar o potencial de resultado no campo.</p>
+        <p className="hero-kicker">Susttenta · conhecimento técnico aplicado ao campo</p>
+        <h1>Biotecnologia Embio com experiência de campo</h1>
+        <p className="hero-summary">Soluções para tratamento de dejetos, ambiência, biodigestores e efluentes, indicadas a partir da realidade de cada operação.</p>
+        <p className="hero-signature">Diagnóstico, orientação e acompanhamento para aplicar a tecnologia certa no lugar certo.</p>
         <div className="hero-actions">
-          <WhatsAppLink message={whatsappMessages.embio} ariaLabel="Falar com um especialista sobre as soluções Embio pelo WhatsApp" className="button button-yellow whatsapp-pulse"><WhatsAppIcon size={20} />Falar com um especialista<ArrowRight size={18} /></WhatsAppLink>
-          <a className="button button-ghost" href="#embio">Conhecer as soluções Embio<ArrowDown size={18} /></a>
+          <WhatsAppLink message={whatsappMessages.embio} ariaLabel="Falar com Pedro sobre as soluções Embio pelo WhatsApp" className="button button-yellow whatsapp-pulse"><WhatsAppIcon size={20} />Falar com Pedro<ArrowRight size={18} /></WhatsAppLink>
+          <a className="button button-ghost" href="#embio">Conhecer as soluções<ArrowDown size={18} /></a>
         </div>
+        <a className="hero-authority" href="#pedro" aria-label="Conhecer a experiência de Pedro Luís Schmidt">
+          <Image src="/media/embio-2026/images/pedro-luis-schmidt.webp" alt="Pedro Luís Schmidt, responsável técnico pela Susttenta" width={62} height={62} priority />
+          <span><strong>Pedro Luís Schmidt</strong><small>28 anos de experiência em assistência técnica na suinocultura</small></span>
+        </a>
       </div>
-      <div className="hero-product" data-reveal>
-        <div className="hero-product-halo" aria-hidden="true" />
-        <Image src={heroMedia.fallbackImage} alt="Conjunto oficial do Tratamento Embiofert com Embio 3000 e Propulsor Embio" width={900} height={900} priority sizes="(max-width: 900px) 92vw, 48vw" />
-        <div className="hero-product-note"><Image src="/media/embio-official/embio-logo-original.png" alt="Embio" width={110} height={42} /><span>Linha principal representada pela Susttenta</span></div>
+      <div className="hero-video-card" data-reveal>
+        <video ref={videoRef} autoPlay muted loop playsInline preload="metadata" poster="/media/embio-2026/posters/embiofert-propulsor-em-operacao.webp" aria-label="Propulsor Embio em funcionamento em uma lagoa de dejetos" onPlay={() => setIsPlaying(true)} onPause={() => setIsPlaying(false)}>
+          <source src="/media/embio-2026/videos/embiofert-propulsor-em-operacao.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-video-shade" aria-hidden="true" />
+        <div className="hero-video-caption"><Image src="/media/embio-official/embio-logo-original.png" alt="Embio" width={96} height={38} /><span>Tratamento Embiofert em operação real</span></div>
+        <button type="button" className="hero-video-control" onClick={togglePlayback} aria-label={isPlaying ? "Pausar vídeo da hero" : "Reproduzir vídeo da hero"}>{isPlaying ? <Pause /> : <Play fill="currentColor" />}</button>
       </div>
     </div>
   </section>;

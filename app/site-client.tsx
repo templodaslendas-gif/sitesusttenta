@@ -20,5 +20,5 @@ export function SiteClient() {
     elements.forEach((element) => observer.observe(element));
     return () => { observer.disconnect(); document.documentElement.classList.remove("reveal-enabled"); };
   }, []);
-  return <><Header /><main><Hero /><EmbioOverview /><EmbiofertSection /><Embio3100Section /><Embio6000Section /><OtherEmbioSolutions /><TlcEcomaxSection onOpen={setActiveMedia} /><PedroAuthority /><FAQ /><FinalCTA /></main><Footer /><VideoModal item={activeMedia} onClose={closeModal} /></>;
+  return <><Header /><main><Hero /><EmbioOverview onOpen={setActiveMedia} /><EmbiofertSection onOpen={setActiveMedia} /><Embio3100Section onOpen={setActiveMedia} /><Embio6000Section onOpen={setActiveMedia} /><OtherEmbioSolutions /><TlcEcomaxSection onOpen={setActiveMedia} /><PedroAuthority /><FAQ /><FinalCTA /></main><Footer /><VideoModal item={activeMedia} onClose={closeModal} /></>;
 }

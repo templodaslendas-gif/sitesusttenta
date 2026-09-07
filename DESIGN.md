@@ -6,9 +6,9 @@ Uma apresentação de campo tecnicamente orientada: estrutura editorial firme, g
 
 ## Hierarquia
 
-1. Hero institucional Susttenta com selo “REPRESENTANTE EMBIO”.
-2. Visão geral Embio.
-3. Tratamento Embiofert em máxima ênfase.
+1. Hero institucional Susttenta com selo “REPRESENTANTE EMBIO”, vídeo real do Propulsor e assinatura técnica de Pedro.
+2. Visão geral Embio com estrutura de tecnologia e laboratório.
+3. Tratamento Embiofert em máxima ênfase, com operação e relatos de campo.
 4. Embio 3100 e Embio 6000 em seções independentes.
 5. Embio 5000+ e Embio 8000 como soluções secundárias.
 6. Seção independente TLC Agro/Ecomax com vídeos oficiais.
@@ -21,7 +21,8 @@ Uma apresentação de campo tecnicamente orientada: estrutura editorial firme, g
 - Azul como apoio técnico, especialmente no Embio 6000.
 - Tipografia existente, com escala clara e comprimentos de linha controlados.
 - Sombras naturais, camadas discretas e bordas apenas quando estruturam conteúdo.
-- Produtos sem deformação, recorte enganoso ou mistura entre marcas.
+- Materiais reais fornecidos pela Embio, sem mídia genérica nem mistura entre marcas.
+- Relatos identificados como experiências de campo, sem apresentação como garantia de resultado.
 
 ## Movimento
 

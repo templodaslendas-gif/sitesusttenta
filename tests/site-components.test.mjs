@@ -10,9 +10,10 @@ const source = (await Promise.all(files.map((file) => readFile(`${root}/${file}`
 test("keeps the first viewport exclusively focused on Susttenta and Embio", async () => {
   const heroSource = await readFile(`${root}/components/site/hero.tsx`, "utf8");
   assert.match(heroSource, /REPRESENTANTE EMBIO/);
-  assert.match(heroSource, /Tecnologia Embio com orientação especializada para o campo/);
+  assert.match(heroSource, /Biotecnologia Embio com experiência de campo/);
   assert.doesNotMatch(heroSource, /TLC|Ecomax|ecomax/i);
-  assert.match(heroSource, /videoSrc: null/);
+  assert.match(heroSource, /embiofert-propulsor-em-operacao\.mp4/);
+  assert.match(heroSource, /Pausar vídeo da hero/);
 });
 
 test("implements every required section", () => {
@@ -50,8 +51,9 @@ test("preserves accessible FAQ, WhatsApp and developer credit", () => {
   assert.match(source, /br-flag\.svg/);
 });
 
-test("uses the safe Pedro placeholder and no invented credentials", () => {
-  assert.match(source, /Foto profissional em atualização/);
+test("uses the supplied Pedro portrait and the confirmed experience statement", () => {
+  assert.match(source, /pedro-luis-schmidt\.webp/);
+  assert.match(source, /28 anos de experiência em assistência técnica na suinocultura/);
   assert.match(source, /Falar diretamente com Pedro/);
-  assert.doesNotMatch(source, /anos de experiência|clientes atendidos|certificad[oa]/i);
+  assert.doesNotMatch(source, /clientes atendidos|certificad[oa]/i);
 });

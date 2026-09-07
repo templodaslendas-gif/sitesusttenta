@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { access } from "node:fs/promises";
 import test, { after } from "node:test";
 import { fileURLToPath } from "node:url";
 import { createServer } from "vite";
@@ -19,11 +20,17 @@ test("defines the eight FAQ questions in the approved commercial hierarchy", asy
   ]);
 });
 
-test("centralizes available and future videos without empty sources", async () => {
+test("centralizes the official Embio and TLC videos without empty sources", async () => {
   const { productVideos } = await vite.ssrLoadModule("/components/site/site-data.ts");
-  assert.equal(productVideos.filter(({ status }) => status === "available").length, 3);
-  assert.equal(productVideos.filter(({ product }) => product === "embio-3100").length, 3);
-  assert.equal(productVideos.filter(({ product }) => product === "embio-6000").length, 3);
+  assert.equal(productVideos.filter(({ status }) => status === "available").length, 10);
+  assert.equal(productVideos.filter(({ product }) => product === "embio").length, 1);
+  assert.equal(productVideos.filter(({ product }) => product === "embiofert").length, 3);
+  assert.equal(productVideos.filter(({ product }) => product === "embio-3100").length, 1);
+  assert.equal(productVideos.filter(({ product }) => product === "embio-6000").length, 2);
   assert.equal(productVideos.some(({ videoSrc }) => videoSrc === ""), false);
   assert.equal(productVideos.filter(({ status }) => status === "coming-soon").every(({ videoSrc }) => videoSrc === null), true);
+  for (const item of productVideos.filter(({ status }) => status === "available")) {
+    await access(`${root}/public${item.videoSrc}`);
+    await access(`${root}/public${item.posterSrc}`);
+  }
 });
