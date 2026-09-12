@@ -8,7 +8,7 @@ import { whatsappMessages } from "./whatsapp";
 const tlcProducts = [
   { name: "Atrativo Biológico EcoMax", eyebrow: "Captura de moscas adultas", description: "Formulação orgânica usada com a armadilha EcoMax para criar pontos de atração e captura em áreas externas da operação.", image: "/media/tlc-official/images/ecomax-produtos.webp", alt: "Embalagens oficiais do Atrativo Biológico EcoMax", fit: "contain" },
   { name: "Armadilha EcoMax", eyebrow: "Entrada e retenção", description: "Estrutura desenvolvida para receber o atrativo e reter as moscas capturadas. Pode ser posicionada no solo ou suspensa, conforme avaliação do local.", image: "/media/tlc-official/images/ecomax-armadilha-oficial.webp", alt: "Armadilha EcoMax em material oficial da TLC Agro", fit: "cover" },
-  { name: "Inseticida Híbrido EcoMax", eyebrow: "Manejo complementar", description: "Alternativa complementar para insetos em ambientes internos e áreas específicas. A seleção, o modo de uso e os cuidados devem seguir o rótulo e a orientação técnica.", image: "/media/tlc-official/catalog-2026/ecomax-inseticida-hibrido.webp", alt: "Linha oficial do Inseticida Híbrido EcoMax", fit: "contain" },
+  { name: "Inseticida Híbrido EcoMax", eyebrow: "Manejo complementar", description: "Alternativa complementar para insetos em ambientes internos e áreas específicas. A seleção, o modo de uso e os cuidados devem seguir o rótulo e a orientação técnica.", image: "/media/tlc-official/catalog-2026/ecomax-inseticida-hibrido-transparente.webp", alt: "Linha do Inseticida Híbrido EcoMax com embalagens recortadas", fit: "contain" },
 ] as const;
 
 const tlcApplications = [

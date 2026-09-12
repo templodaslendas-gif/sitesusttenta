@@ -19,6 +19,7 @@ declaração de licença pública; o uso parte do fornecimento direto dos materi
 Derivações publicadas em `public/media/tlc-official/catalog-2026/`:
 
 - `ecomax-inseticida-hibrido.webp`: recorte da página 8 da apresentação comercial, redimensionado e convertido para WebP.
+- `ecomax-inseticida-hibrido-transparente.webp`: derivação do recorte anterior para o card de produto. O fundo escuro e letras residuais fora das embalagens foram removidos com edição assistida por imagem; as quatro embalagens, composição, rótulos e cores foram preservados. Publicada em WebP com canal alfa sobre fundo claro definido pelo CSS.
 - `aplicacao-pecuaria.webp`: recorte fotográfico da página 9, sem as alegações percentuais do slide.
 - `aplicacao-avicultura.webp`: recorte fotográfico da página 10, sem números ou promessas de resultado.
 - `aplicacao-suinocultura.webp`: recorte fotográfico da página 11, sem alegações absolutas.

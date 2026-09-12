@@ -10,7 +10,7 @@ const source = (await Promise.all(files.map((file) => readFile(`${root}/${file}`
 test("keeps the hero copy focused on Susttenta and Embio", async () => {
   const heroSource = await readFile(`${root}/components/site/hero.tsx`, "utf8");
   assert.match(heroSource, /SUSTTENTA/);
-  assert.match(heroSource, /ORIENTAÇÃO TÉCNICA APLICADA AO CAMPO/);
+  assert.match(heroSource, /REPRESENTANTE AUTORIZADO EMBIO/);
   assert.doesNotMatch(heroSource, /representante exclusivo|distribuidor exclusivo|exclusividade/i);
   assert.match(heroSource, /Especialista em tratamento de dejetos suínos e bovinos/);
   assert.doesNotMatch(heroSource, /TLC|Ecomax|ecomax/i);
@@ -20,6 +20,7 @@ test("keeps the hero copy focused on Susttenta and Embio", async () => {
   assert.match(heroSource, /Pausar vídeo da hero/);
   assert.match(heroSource, /visually-hidden-focusable/);
   assert.match(heroSource, /href="#embiofert"/);
+  assert.doesNotMatch(heroSource, /Tratamento responsável começa/);
 });
 
 test("implements every required section", () => {
@@ -109,6 +110,19 @@ test("gives every video a visible play affordance and inline playback", async ()
   assert.match(inlineSource, /aria-label=\{`\$\{playLabel\}: \$\{item\.title\}`\}/);
   assert.match(inlineSource, /item\.status === "coming-soon" \|\| !item\.videoSrc/);
   assert.match(inlineSource, /Vídeo em breve/);
+});
+
+test("keeps the Embiofert and EcoMax media uncluttered", async () => {
+  const [embiofert, overview, tlc] = await Promise.all([
+    readFile(`${root}/components/site/embiofert-section.tsx`, "utf8"),
+    readFile(`${root}/components/site/embio-overview.tsx`, "utf8"),
+    readFile(`${root}/components/site/tlc-section.tsx`, "utf8"),
+  ]);
+  assert.doesNotMatch(embiofert, /embiofert-tratamento-integrado\.webp/);
+  assert.match(embiofert, /variant="duo"/);
+  assert.match(overview, /Laboratório e fabricação própria do início ao fim do processo/);
+  assert.match(tlc, /ecomax-inseticida-hibrido-transparente\.webp/);
+  await access(`${root}/public/media/tlc-official/catalog-2026/ecomax-inseticida-hibrido-transparente.webp`);
 });
 
 test("keeps TLC media inside the independent TLC section", () => {

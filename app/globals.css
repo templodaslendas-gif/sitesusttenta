@@ -138,6 +138,7 @@ html{scroll-padding-top:24px}
   .product-stage-evidence,.product-stage-presentation{min-height:320px;padding-inline:12px}
   .pedro-portrait{min-height:460px;border-radius:110px 110px 20px 20px}
 }
+
 @media(max-width:380px){
   .hero-video-caption span{display:none}
   .hero-authority img{width:48px;height:48px}
@@ -643,4 +644,33 @@ small{font-size:.86rem}
   .mobile-navigation{top:166px}
   .hero.hero-cinema{min-height:calc(100svh - 166px)}
   .footer-logo-new img,.footer-logo-new img:first-child{width:min(72vw,270px)}
+}
+
+/* ============================================================
+   Ajustes de legibilidade mobile e redução de ruído visual
+   ============================================================ */
+.embiofert-primary .embiofert-feature{display:block;max-width:900px;margin:0 auto}
+.embiofert-primary .embiofert-copy{max-width:900px}
+.embiofert-primary .product-video-grid.pvg-duo{grid-template-columns:repeat(2,minmax(0,1fr));max-width:none}
+.embiofert-primary .video-card .inline-video{aspect-ratio:16 / 9}
+.laboratory-story header{max-width:1040px}
+.laboratory-story header>p:last-child{max-width:900px}
+.tlc-product-grid article:last-child .tlc-card-media{background:linear-gradient(145deg,#f7f4dd,#fff8d5)}
+.tlc-product-grid article:last-child .tlc-card-media img{padding:22px 28px 14px}
+
+@media(max-width:760px){
+  .hero.hero-cinema{align-items:flex-end;padding:clamp(30px,5vh,46px) 0 clamp(48px,8vh,72px)}
+  .hero.hero-cinema h1{font-size:clamp(2.25rem,10.8vw,3.55rem);line-height:1.02}
+  .hero.hero-cinema .hero-summary{max-width:31ch;font-size:1rem;line-height:1.5}
+  .hero.hero-cinema .hero-actions{display:grid;grid-template-columns:1fr;gap:10px;width:100%}
+  .hero.hero-cinema .hero-actions .button{width:100%;min-height:54px}
+  .hero.hero-cinema .hero-actions .whatsapp-pulse svg{display:block;flex:none;width:23px;height:23px}
+  .embiofert-primary .product-video-grid.pvg-duo{grid-template-columns:1fr}
+  .embiofert-primary .video-card .inline-video{aspect-ratio:16 / 9}
+  .embiofert-primary .video-card-copy{padding:24px 22px 28px}
+  .embiofert-primary .video-card-copy h3{font-size:1.45rem}
+  .embiofert-primary .video-card-copy p{font-size:1.05rem;line-height:1.65}
+  .laboratory-story h3{font-size:clamp(2.35rem,11vw,3.65rem);overflow-wrap:break-word}
+  .tlc-product-grid article:last-child .tlc-card-media{min-height:360px}
+  .tlc-product-grid article:last-child .tlc-card-media img{padding:20px}
 }
