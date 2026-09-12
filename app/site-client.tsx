@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { FAQ, FinalCTA, PedroAuthority } from "@/components/site/closing-sections";
 import { EmbioOverview } from "@/components/site/embio-overview";
-import { Embio3100Section, Embio6000Section } from "@/components/site/embio-product-sections";
+import { Embio3100Section, Embio6000Section, Embio8000Section } from "@/components/site/embio-product-sections";
 import { EmbiofertSection } from "@/components/site/embiofert-section";
 import { Hero } from "@/components/site/hero";
 import { Footer, Header } from "@/components/site/site-chrome";
@@ -17,5 +17,5 @@ export function SiteClient() {
     elements.forEach((element) => observer.observe(element));
     return () => { observer.disconnect(); document.documentElement.classList.remove("reveal-enabled"); };
   }, []);
-  return <><Header /><main><Hero /><EmbiofertSection /><EmbioOverview /><Embio3100Section /><Embio6000Section /><TlcEcomaxSection /><PedroAuthority /><FAQ /><FinalCTA /></main><Footer /></>;
+  return <><Header /><main><Hero /><EmbiofertSection /><EmbioOverview /><Embio3100Section /><Embio6000Section /><Embio8000Section /><TlcEcomaxSection /><PedroAuthority /><FAQ /><FinalCTA /></main><Footer /></>;
 }

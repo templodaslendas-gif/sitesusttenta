@@ -3,10 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Susttenta | Soluções biotecnológicas para o campo",
-  description: "Tecnologias Embio e TLC Agro com orientação para tratamento biológico, ambiência, manejo de dejetos e controle estratégico de moscas.",
+  description: "Tecnologias Embio e TLC Agro com orientação para tratamento biológico, ambiência, manejo de dejetos, efluentes e controle estratégico de moscas.",
   applicationName: "Susttenta",
   manifest: "/site.webmanifest",
-  keywords: ["Susttenta", "Embio", "TLC Agro", "Ecomax", "tratamento de dejetos", "controle de moscas", "biodigestor", "granjas"],
+  keywords: ["Susttenta", "Embio", "Embio 8000", "TLC Agro", "Ecomax", "tratamento de dejetos", "tratamento de efluentes", "controle de moscas", "biodigestor", "granjas"],
   openGraph: {
     title: "Susttenta | Soluções biotecnológicas para o campo",
     description: "Soluções Embio e TLC Agro com orientação para granjas, lagoas, biodigestores e controle estratégico de moscas.",

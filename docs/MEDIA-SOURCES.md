@@ -116,6 +116,21 @@ Observações sobre autorização: publicado diretamente no domínio oficial da 
 
 ## Embio
 
+### Embio 8000 e e-book técnico (2026-09-12)
+
+- E-book-fonte: `EBOOK - Potência e Eficiência no Tratamento de Efluentes (1).pdf`, fornecido diretamente pelo responsável do site. O PDF foi usado como contexto para desafios de carga orgânica, mistura e oxigenação em estações de tratamento; ele aborda o Propulsor Embio e não cita o Embio 8000 nominalmente. O PDF original não integra `public/`.
+- Conteúdo específico do Embio 8000: página oficial `https://embio.com.br/`, consultada em 2026-09-12. Foram usadas somente as indicações públicas sobre efluentes industriais e agroindustriais, óleos, ácidos graxos, matéria orgânica e avaliação da estação, sem percentuais, dosagens ou garantia de resultado.
+- Imagem-fonte: `public/media/embio-official/embio-8000.webp`, já registrada neste documento e proveniente da apresentação oficial do produto.
+- Derivação publicada: `public/media/embio-official/embio-8000-frasco.webp` (340 × 816 px, WebP com transparência). O fundo branco conectado às bordas foi removido por flood-fill determinístico com tolerância baixa; rótulo, embalagem, cores e proporção foram preservados.
+- Uso no site: seção própria do Embio 8000, sem depoimentos e com encaminhamento para avaliação técnica pelo WhatsApp.
+
+### Identidade Susttenta atualizada (2026-09-12)
+
+- Arquivo-fonte: `WhatsApp Image 2026-09-09 at 10.52.54.jpeg`, fornecido diretamente pelo responsável do site.
+- Derivação principal: `public/media/brand/susttenta-logo-2026.webp`, preservando a composição completa, o novo conjunto de animais, o wordmark e a assinatura “Gerando Resultados com Sustentabilidade”.
+- Derivações de interface: `public/logo-susttenta-wordmark.png` e conjunto de favicons/ícones (`favicon-master-1024.png`, PNGs 16/32/48, Apple Touch Icon, Android 192/512, MSTile e ICO). O favicon usa o novo emblema sem o wordmark, para permanecer reconhecível em tamanhos pequenos.
+- A captura `WhatsApp Image 2026-09-07 at 21.24.28.jpeg` foi conferida e contém a mesma fotografia de Pedro já publicada, acrescida da interface do celular e de elementos do site. Ela não substitui o retrato limpo `images/pedro-luis-schmidt.webp`.
+
 ### Pacote oficial fornecido em setembro de 2026
 
 Arquivos-fonte fornecidos diretamente pelo responsável pelo site em 2026-09-07. Os originais de WhatsApp foram usados somente como fonte de trabalho e não integram o pacote público. O site publica derivações com nomes descritivos em `public/media/embio-2026/`.

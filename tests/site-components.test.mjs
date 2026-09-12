@@ -7,10 +7,10 @@ const root = fileURLToPath(new URL("..", import.meta.url));
 const files = ["app/site-client.tsx", "components/site/hero.tsx", "components/site/embio-overview.tsx", "components/site/embiofert-section.tsx", "components/site/embio-product-sections.tsx", "components/site/tlc-section.tsx", "components/site/closing-sections.tsx", "components/site/site-chrome.tsx", "components/site/product-video-gallery.tsx", "components/site/inline-video.tsx", "components/site/site-data.ts"];
 const source = (await Promise.all(files.map((file) => readFile(`${root}/${file}`, "utf8")))).join("\n");
 
-test("keeps the first viewport exclusively focused on Susttenta and Embio", async () => {
+test("keeps the hero copy focused on Susttenta and Embio", async () => {
   const heroSource = await readFile(`${root}/components/site/hero.tsx`, "utf8");
   assert.match(heroSource, /SUSTTENTA/);
-  assert.match(heroSource, /REPRESENTANTE AUTORIZADO EMBIO/);
+  assert.match(heroSource, /ORIENTAÇÃO TÉCNICA APLICADA AO CAMPO/);
   assert.doesNotMatch(heroSource, /representante exclusivo|distribuidor exclusivo|exclusividade/i);
   assert.match(heroSource, /Especialista em tratamento de dejetos suínos e bovinos/);
   assert.doesNotMatch(heroSource, /TLC|Ecomax|ecomax/i);
@@ -23,13 +23,13 @@ test("keeps the first viewport exclusively focused on Susttenta and Embio", asyn
 });
 
 test("implements every required section", () => {
-  for (const id of ["embio", "embiofert", "embio-3100", "embio-6000", "tlc-agro", "pedro", "faq", "contato"]) assert.match(source, new RegExp(`id=\\"${id}\\"`));
+  for (const id of ["embio", "embiofert", "embio-3100", "embio-6000", "embio-8000", "tlc-agro", "pedro", "faq", "contato"]) assert.match(source, new RegExp(`id=\\"${id}\\"`));
   assert.doesNotMatch(source, /BrandRepresentationCards|SolutionsCarousel|TechnicalChallenges|Testimonials|EmbioHighlights/);
 });
 
 test("keeps the approved section order after the hero", async () => {
   const clientSource = await readFile(`${root}/app/site-client.tsx`, "utf8");
-  const order = ["<Hero", "<EmbiofertSection", "<EmbioOverview", "<Embio3100Section", "<Embio6000Section", "<TlcEcomaxSection", "<PedroAuthority", "<FAQ", "<FinalCTA"];
+  const order = ["<Hero", "<EmbiofertSection", "<EmbioOverview", "<Embio3100Section", "<Embio6000Section", "<Embio8000Section", "<TlcEcomaxSection", "<PedroAuthority", "<FAQ", "<FinalCTA"];
   const positions = order.map((token) => clientSource.indexOf(token));
   assert.ok(positions.every((position) => position >= 0), "every section is rendered");
   assert.deepEqual(positions, [...positions].sort((a, b) => a - b), "sections stay in order");
@@ -47,17 +47,19 @@ test("removes video modals in favour of inline playback", async () => {
   assert.match(inlineSource, /setPlaying\(true\)/);
 });
 
-test("presents Embio 3100 and Embio 6000 as two separate sections", async () => {
+test("presents Embio 3100, Embio 6000 and Embio 8000 as separate sections", async () => {
   const solutions = await readFile(`${root}/components/site/embio-product-sections.tsx`, "utf8");
   assert.match(solutions, /export function Embio3100Section/);
   assert.match(solutions, /export function Embio6000Section/);
+  assert.match(solutions, /export function Embio8000Section/);
   assert.doesNotMatch(solutions, /EmbioSolutionsSection|embio-solutions-grid/);
   assert.match(solutions, /id="embio-3100"/);
   assert.match(solutions, /id="embio-6000"/);
+  assert.match(solutions, /id="embio-8000"/);
   assert.ok(solutions.indexOf("Embio3100Section") < solutions.indexOf("Embio6000Section"));
   assert.match(solutions, /não é a principal indicação quando o dejeto segue diretamente para o biodigestor/);
   assert.match(solutions, /não representa garantia de aumento da produção de biogás/);
-  assert.doesNotMatch(solutions, /Embio 5000\+|Embio 8000/);
+  assert.doesNotMatch(solutions, /Embio 5000\+/);
 });
 
 test("presents the Embio bottles as trimmed transparent artwork on a coherent stage", async () => {
@@ -67,12 +69,21 @@ test("presents the Embio bottles as trimmed transparent artwork on a coherent st
   ]);
   assert.match(sections, /embio-3100-frasco\.webp/);
   assert.match(sections, /embio-6000-frasco\.webp/);
+  assert.match(sections, /embio-8000-frasco\.webp/);
   assert.doesNotMatch(sections, /embio-official\/embio-3100\.webp|embio-official\/embio-6000\.webp/);
   assert.match(sections, /embio-product-stage/);
   assert.match(css, /\.embio-product-stage::after/);
   assert.match(css, /\.embio-product-stage::before/);
   await access(`${root}/public/media/embio-official/embio-3100-frasco.webp`);
   await access(`${root}/public/media/embio-official/embio-6000-frasco.webp`);
+  await access(`${root}/public/media/embio-official/embio-8000-frasco.webp`);
+});
+
+test("gives the represented brands a prominent, accurate header treatment", () => {
+  assert.match(source, /Representante autorizado/);
+  assert.match(source, /Empresa de biotecnologia/);
+  assert.match(source, /embio-logo-original\.png/);
+  assert.match(source, /tlc-logo-original\.svg/);
 });
 
 test("drives video proportion from media data instead of a rigid height", async () => {

@@ -24,6 +24,20 @@ export function Header() {
       <a className="site-logo" href="#inicio" aria-label="Susttenta, página inicial"><Image src="/favicon-master-1024.png" alt="" width={54} height={54} priority /><Image src="/logo-susttenta-wordmark.png" alt="Susttenta" width={178} height={25} priority /></a>
       <WhatsAppLink message={whatsappMessages.embio} ariaLabel="Falar com a Susttenta pelo WhatsApp" className="header-whatsapp whatsapp-pulse"><WhatsAppIcon size={19} /><span>Falar com a Susttenta</span></WhatsAppLink>
     </div>
+    <div className="represented-brands" aria-label="Marcas representadas pela Susttenta">
+      <div className="container represented-brands-inner">
+        <strong>Representante autorizado</strong>
+        <div className="represented-brand represented-brand-embio">
+          <Image src="/media/embio-official/embio-logo-original.png" alt="Embio" width={146} height={40} />
+          <span>Empresa de biotecnologia</span>
+        </div>
+        <span className="represented-brands-divider" aria-hidden="true" />
+        <div className="represented-brand represented-brand-tlc">
+          <Image src="/media/tlc-official/images/tlc-logo-original.svg" alt="TLC Agro" width={140} height={40} />
+          <span>Linha complementar para controle de moscas</span>
+        </div>
+      </div>
+    </div>
     <nav className="desktop-navigation" aria-label="Navegação principal">{navigationItems.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}</nav>
     <nav id="mobile-navigation" className={`mobile-navigation ${open ? "is-open" : ""}`} aria-label="Navegação móvel" hidden={!open}>{navigationItems.map((item) => <a key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>)}<WhatsAppLink message={whatsappMessages.embio} ariaLabel="Solicitar orientação pelo WhatsApp" className="whatsapp-pulse">Solicitar orientação</WhatsAppLink></nav>
   </header>;
@@ -34,8 +48,8 @@ export function Footer() {
   return <>
     <footer className="site-footer">
       <div className="container footer-grid">
-        <div className="footer-summary"><a className="footer-logo" href="#inicio"><Image src="/favicon-master-1024.png" alt="" width={76} height={76} /><Image src="/logo-susttenta-wordmark.png" alt="Susttenta" width={248} height={35} /></a><p>Representante autorizado Embio, com orientação para tratamento biológico de dejetos, ambiência, biodigestores e efluentes.</p><a className="footer-phone" href="tel:+5546999259777">+55 (46) 99925-9777</a></div>
-        <div><strong>Produtos Embio</strong><a href="#embiofert">Tratamento Embiofert</a><a href="#embio-3100">Embio 3100</a><a href="#embio-6000">Embio 6000</a></div>
+        <div className="footer-summary"><a className="footer-logo footer-logo-new" href="#inicio"><Image src="/media/brand/susttenta-logo-2026.webp" alt="Susttenta — Gerando Resultados com Sustentabilidade" width={280} height={280} /></a><p>Representante autorizado Embio, com orientação para tratamento biológico de dejetos, ambiência, biodigestores e efluentes.</p><a className="footer-phone" href="tel:+5546999259777">+55 (46) 99925-9777</a></div>
+        <div><strong>Produtos Embio</strong><a href="#embiofert">Tratamento Embiofert</a><a href="#embio-3100">Embio 3100</a><a href="#embio-6000">Embio 6000</a><a href="#embio-8000">Embio 8000</a></div>
         <div><strong>TLC Agro e Ecomax</strong><a href="#tlc-agro">Conhecer a linha Ecomax</a><WhatsAppLink message={whatsappMessages.ecomax} ariaLabel="Falar sobre a linha Ecomax pelo WhatsApp">WhatsApp Ecomax</WhatsAppLink><strong className="footer-subheading">Acesso rápido</strong><a href="#pedro">Sobre Pedro</a><a href="#faq">Perguntas frequentes</a></div>
         <div><strong>Privacidade</strong><Link href="/privacidade">Política de Privacidade</Link><Link href="/cookies">Política de Cookies</Link><Link href="/termos">Termos de Uso</Link><button type="button" onClick={manageCookies}>Gerenciar preferências</button></div>
       </div>

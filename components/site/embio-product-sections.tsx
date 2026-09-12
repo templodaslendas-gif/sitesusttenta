@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, Droplets, ShieldAlert, Wind } from "lucide-react";
+import { ArrowRight, Droplets, Factory, ShieldAlert, Wind } from "lucide-react";
 import { ProductVideoGallery } from "./product-video-gallery";
 import { productVideos } from "./site-data";
 import { WhatsAppLink } from "./site-chrome";
@@ -63,6 +63,32 @@ export function Embio6000Section() {
     </div>
     <div className="embio-product-cta" data-reveal>
       <WhatsAppLink message={whatsappMessages.embio6000} ariaLabel="Consultar aplicação do Embio 6000 pelo WhatsApp" className="button button-yellow whatsapp-pulse">Consultar o Embio 6000<ArrowRight size={18} /></WhatsAppLink>
+    </div>
+  </div></section>;
+}
+
+export function Embio8000Section() {
+  return <section id="embio-8000" className="section embio-product embio-product-8000"><div className="container">
+    <div className="embio-product-layout embio-product-layout-compact" data-reveal>
+      <div className="embio-product-copy">
+        <p className="section-label">Efluentes industriais e agroindustriais</p>
+        <h2>Embio 8000</h2>
+        <p className="lead">Tratamento biotecnológico desenvolvido para efluentes com alta concentração de óleos e ácidos graxos.</p>
+        <ul className="technical-list">
+          <li><Droplets />Auxilia a biodegradação de óleos, gorduras e compostos orgânicos complexos.</li>
+          <li><Factory />Apoia a redução da carga orgânica e de odores em estações de tratamento biológico.</li>
+          <li><ShieldAlert />Aplicação definida a partir das características do efluente e da estrutura da estação.</li>
+        </ul>
+      </div>
+      <div className="embio-product-media">
+        <div className="embio-product-stage">
+          <Image src="/media/embio-official/embio-8000-frasco.webp" alt="Frasco oficial do Embio 8000, bioestimulador da linha agroindústria" width={340} height={816} sizes="(max-width: 900px) 66vw, 34vw" />
+        </div>
+      </div>
+      <aside className="biodigester-warning embio-product-warning"><strong>Diagnóstico antes da aplicação.</strong> Carga orgânica, presença de óleos e gorduras, mistura, oxigenação e condições da estação precisam ser avaliadas para orientar o tratamento.</aside>
+    </div>
+    <div className="embio-product-cta" data-reveal>
+      <WhatsAppLink message={whatsappMessages.embio8000} ariaLabel="Consultar aplicação do Embio 8000 pelo WhatsApp" className="button button-primary whatsapp-pulse">Consultar o Embio 8000<ArrowRight size={18} /></WhatsAppLink>
     </div>
   </div></section>;
 }

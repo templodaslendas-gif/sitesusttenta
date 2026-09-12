@@ -70,7 +70,7 @@ export function Hero() {
       </button>
       <div className="container hero-cinema-content">
         <div className="hero-copy" data-reveal>
-          <p className="hero-mark">SUSTTENTA <span aria-hidden="true">|</span> REPRESENTANTE AUTORIZADO EMBIO</p>
+          <p className="hero-mark">SUSTTENTA <span aria-hidden="true">|</span> ORIENTAÇÃO TÉCNICA APLICADA AO CAMPO</p>
           <h1>Especialista em tratamento de dejetos suínos e bovinos</h1>
           <p className="hero-summary">A Susttenta une tecnologia Embio, diagnóstico técnico e experiência de campo para orientar soluções adequadas à realidade de cada operação.</p>
           <p className="hero-signature">Tratamento responsável começa pela compreensão do sistema, do manejo e do destino dos dejetos.</p>

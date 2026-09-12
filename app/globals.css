@@ -602,3 +602,45 @@ small{font-size:.86rem}
   .product-video-grid.pvg-grid,
   .product-video-grid.pvg-grid.has-portrait{grid-template-columns:1fr}
 }
+
+/* ============================================================
+   Identidade 2026 — faixa de representação, Embio 8000 e nova marca
+   ============================================================ */
+.represented-brands{background:#063d24;color:#fff;border-top:1px solid rgba(255,255,255,.08)}
+.represented-brands-inner{min-height:68px;display:grid;grid-template-columns:auto minmax(250px,1fr) 1px minmax(250px,1fr);align-items:center;gap:clamp(18px,3vw,40px)}
+.represented-brands-inner>strong{font-size:clamp(.9rem,1.15vw,1.05rem);font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);white-space:nowrap}
+.represented-brand{min-width:0;display:flex;align-items:center;justify-content:center;gap:14px}
+.represented-brand img{display:block;width:auto;height:clamp(27px,2.7vw,36px);object-fit:contain}
+.represented-brand span{font-size:clamp(.82rem,1vw,.95rem);font-weight:750;line-height:1.25;color:#e5f0e9}
+.represented-brand-embio span{color:#a8d879}
+.represented-brand-tlc span{color:#f7d552}
+.represented-brands-divider{height:34px;background:rgba(255,255,255,.22)}
+.hero.hero-cinema{min-height:calc(100svh - 202px)}
+.footer-logo-new{width:max-content;max-width:100%;padding:10px;border-radius:18px;background:#fff}
+.footer-logo-new img,.footer-logo-new img:first-child{width:clamp(220px,23vw,280px);height:auto}
+
+.embio-product-8000{background:#edf3eb;color:var(--ink)}
+.embio-product-8000 .embio-product-media{background:linear-gradient(180deg,rgba(255,255,255,0) 50%,rgba(37,92,54,.12) 100%),radial-gradient(125% 86% at 50% 8%,#f8fbf5 0%,#dcebd7 52%,#c9dfc4 100%)}
+.embio-product-8000 .embio-product-stage img{filter:drop-shadow(0 20px 22px rgba(12,38,22,.28))}
+.embio-product-8000 .embio-product-stage::before{background:radial-gradient(ellipse at center,rgba(255,255,255,.72) 0%,rgba(255,255,255,0) 70%)}
+.embio-product-8000 .section-label{color:#2f7650}
+.embio-product-layout-compact{align-items:center}
+.embio-product-layout-compact .embio-product-media{min-height:clamp(360px,39vw,500px)}
+
+@media(max-width:1020px){
+  .represented-brands-inner{grid-template-columns:auto minmax(210px,1fr) 1px minmax(210px,1fr);gap:16px}
+  .represented-brand{gap:9px}
+  .represented-brand span{font-size:.76rem}
+}
+@media(max-width:760px){
+  html{scroll-padding-top:166px}
+  .represented-brands-inner{min-height:92px;grid-template-columns:1fr 1fr;gap:8px 16px;padding:9px 0 11px}
+  .represented-brands-inner>strong{grid-column:1/-1;text-align:center;font-size:.8rem;white-space:normal}
+  .represented-brand{display:grid;justify-items:center;gap:5px;text-align:center}
+  .represented-brand img{height:24px;max-width:132px}
+  .represented-brand span{font-size:.75rem;line-height:1.25}
+  .represented-brands-divider{display:none}
+  .mobile-navigation{top:166px}
+  .hero.hero-cinema{min-height:calc(100svh - 166px)}
+  .footer-logo-new img,.footer-logo-new img:first-child{width:min(72vw,270px)}
+}

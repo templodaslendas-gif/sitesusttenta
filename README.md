@@ -1,6 +1,6 @@
 # Susttenta
 
-Site institucional e comercial da Susttenta, representante prioritária da linha Embio para tratamento biológico, ambiência, manejo de dejetos e efluentes. A apresentação usa vídeos e imagens fornecidos pela Embio, relatos de campo e a experiência técnica de Pedro Luís Schmidt. A TLC Agro integra o portfólio como linha complementar em uma apresentação independente.
+Site institucional e comercial da Susttenta, representante prioritária da linha Embio para tratamento biológico, ambiência, manejo de dejetos e efluentes. A apresentação usa vídeos e imagens fornecidos pela Embio, inclui Embiofert, Embio 3100, Embio 6000 e Embio 8000, relatos de campo e a experiência técnica de Pedro Luís Schmidt. A TLC Agro integra o portfólio como linha complementar em uma apresentação independente.
 
 ## Stack
 

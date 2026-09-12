@@ -1,5 +1,5 @@
 export const navigationItems = [
-  { label: "Início", href: "#inicio" }, { label: "Embiofert", href: "#embiofert" }, { label: "Embio 3100", href: "#embio-3100" }, { label: "Embio 6000", href: "#embio-6000" }, { label: "TLC Agro", href: "#tlc-agro" }, { label: "Sobre Pedro", href: "#pedro" }, { label: "Contato", href: "#contato" },
+  { label: "Início", href: "#inicio" }, { label: "Embiofert", href: "#embiofert" }, { label: "Embio 3100", href: "#embio-3100" }, { label: "Embio 6000", href: "#embio-6000" }, { label: "Embio 8000", href: "#embio-8000" }, { label: "TLC Agro", href: "#tlc-agro" }, { label: "Sobre Pedro", href: "#pedro" }, { label: "Contato", href: "#contato" },
 ] as const;
 
 export type ProductVideo = { id: string; title: string; description: string; eyebrow: string; product: "embio" | "embiofert" | "embio-3100" | "embio-6000" | "tlc"; status: "available" | "coming-soon"; videoSrc: string | null; posterSrc: string; aspectRatio?: string };
@@ -26,6 +26,7 @@ export const faqItems = [
   { question: "Como Embio 3000 e Propulsor trabalham juntos?", answer: "O Propulsor promove circulação, aeração e homogeneização, enquanto o Embio 3000 fornece o componente biológico. A movimentação favorece a distribuição dos microrganismos e o contato com a matéria orgânica." },
   { question: "Qual a diferença entre Embio 3100 e Embio 6000?", answer: "O Embio 3100 é direcionado ao manejo interno de instalações de suínos sem envio direto ao biodigestor. O Embio 6000 atende instalações que enviam dejetos ao biodigestor, preservando a matéria orgânica destinada ao processo anaeróbio." },
   { question: "Qual solução considerar quando existe biodigestor?", answer: "O Embio 6000 deve ser considerado nesse cenário, mas a recomendação final depende do fluxo dos dejetos, das estruturas intermediárias e das condições da operação." },
+  { question: "Para que serve o Embio 8000?", answer: "O Embio 8000 é direcionado ao tratamento biotecnológico de efluentes industriais e agroindustriais com alta concentração de óleos e ácidos graxos. A recomendação depende da caracterização do efluente, da carga orgânica e das condições da estação de tratamento." },
   { question: "Como funciona a linha Ecomax?", answer: "O atrativo e a armadilha formam um conjunto de atração, entrada e retenção de moscas. Posicionamento, monitoramento, limpeza e manejo ambiental influenciam a utilização." },
   { question: "A Susttenta realiza avaliação antes da recomendação?", answer: "Sim. O atendimento considera ambiente, estrutura, manejo, destino dos dejetos e objetivo da operação antes de direcionar uma solução." },
   { question: "Como falar diretamente com Pedro?", answer: "Use o botão de WhatsApp desta página. Se possível, informe o tipo de operação, o desafio observado e como os resíduos ou dejetos são manejados." },
