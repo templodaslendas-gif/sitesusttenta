@@ -150,6 +150,15 @@ test("preserves accessible FAQ, WhatsApp and developer credit", () => {
   assert.match(source, /br-flag\.svg/);
 });
 
+test("keeps the header WhatsApp shortcut visibly pulsing on mobile", async () => {
+  const css = await readFile(`${root}/app/globals.css`, "utf8");
+  assert.match(source, /className="header-whatsapp whatsapp-pulse"/);
+  assert.match(css, /\.header-whatsapp\.whatsapp-pulse::before/);
+  assert.match(css, /@keyframes headerWhatsappRing/);
+  assert.match(css, /@keyframes headerWhatsappButtonBeat/);
+  assert.match(css, /prefers-reduced-motion:reduce/);
+});
+
 test("uses the supplied Pedro portrait and the confirmed experience statement", () => {
   assert.match(source, /pedro-luis-schmidt\.webp/);
   assert.match(source, /28 anos de experiência em assistência técnica na suinocultura/);

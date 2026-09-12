@@ -674,3 +674,48 @@ small{font-size:.86rem}
   .tlc-product-grid article:last-child .tlc-card-media{min-height:360px}
   .tlc-product-grid article:last-child .tlc-card-media img{padding:20px}
 }
+
+/* Pulso evidente no atalho do WhatsApp do cabeçalho mobile. */
+@media(max-width:760px){
+  .header-whatsapp.whatsapp-pulse{
+    position:relative;
+    isolation:isolate;
+    overflow:visible;
+    animation:headerWhatsappButtonBeat 2.2s ease-in-out infinite;
+    box-shadow:0 6px 18px rgba(9,80,39,.24);
+  }
+  .header-whatsapp.whatsapp-pulse::before,
+  .header-whatsapp.whatsapp-pulse::after{
+    content:"";
+    position:absolute;
+    inset:-3px;
+    z-index:-1;
+    border:2px solid #25d366;
+    border-radius:inherit;
+    pointer-events:none;
+    animation:headerWhatsappRing 2.2s cubic-bezier(.2,.65,.35,1) infinite;
+  }
+  .header-whatsapp.whatsapp-pulse::after{animation-delay:1.1s}
+  .header-whatsapp.whatsapp-pulse svg{animation:headerWhatsappIconBeat 2.2s ease-in-out infinite}
+}
+@keyframes headerWhatsappRing{
+  0%{opacity:.78;transform:scale(.9)}
+  72%,100%{opacity:0;transform:scale(1.58)}
+}
+@keyframes headerWhatsappButtonBeat{
+  0%,42%,100%{transform:scale(1)}
+  48%{transform:scale(1.08)}
+  54%{transform:scale(1)}
+  60%{transform:scale(1.05)}
+}
+@keyframes headerWhatsappIconBeat{
+  0%,42%,100%{transform:scale(1)}
+  48%{transform:scale(1.16)}
+  60%{transform:scale(1.1)}
+}
+@media(max-width:760px) and (prefers-reduced-motion:reduce){
+  .header-whatsapp.whatsapp-pulse,
+  .header-whatsapp.whatsapp-pulse::before,
+  .header-whatsapp.whatsapp-pulse::after,
+  .header-whatsapp.whatsapp-pulse svg{animation:none!important}
+}
