@@ -294,8 +294,10 @@ small{font-size:.86rem}
 .hero-cinema-shade{position:absolute;inset:0;background:linear-gradient(103deg,rgba(3,22,13,.9) 0%,rgba(3,22,13,.6) 42%,rgba(3,22,13,.26) 72%,rgba(3,22,13,.1) 100%),linear-gradient(180deg,rgba(3,22,13,.42) 0%,rgba(3,22,13,.24) 34%,rgba(3,22,13,.6) 100%)}
 .hero-cinema-content{position:relative;z-index:2}
 .hero-cinema .hero-copy{max-width:640px}
-.hero-mark{margin:0 0 clamp(14px,2vh,22px);padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.3);font-family:Arial,"Helvetica Neue",sans-serif;font-size:clamp(.72rem,.9vw,.82rem);font-weight:800;letter-spacing:.22em;color:#fce6a0;text-transform:uppercase}
-.hero-mark span{margin:0 .5em;color:rgba(255,255,255,.55);font-weight:400}
+.hero-mark{margin:0 0 clamp(14px,2vh,22px);padding-bottom:10px;display:flex;align-items:center;justify-content:center;gap:.8em;border-bottom:1px solid rgba(255,255,255,.3);font-family:Arial,"Helvetica Neue",sans-serif;font-size:clamp(.72rem,.9vw,.82rem);font-weight:800;letter-spacing:.18em;color:#fce6a0;text-align:center;text-transform:uppercase}
+.hero-mark span{margin:0}
+.hero-mark-divider{color:rgba(255,255,255,.55);font-weight:400}
+.hero-mark-owner,.hero-mark-statement{font-weight:900}
 .hero.hero-cinema h1{max-width:none;margin:0;font-size:clamp(2.1rem,3.9vw,3.5rem);line-height:1.07;letter-spacing:-.04em;color:#fff;text-shadow:0 2px 26px rgba(0,0,0,.42)}
 .hero.hero-cinema .hero-summary{max-width:560px;margin:16px 0 0;font-size:clamp(1rem,1.35vw,1.12rem);line-height:1.6;color:#eef5f0;text-shadow:0 1px 14px rgba(0,0,0,.36)}
 .hero.hero-cinema .hero-signature{max-width:540px;margin:15px 0 0;padding-left:14px;border-left:3px solid var(--yellow);font-family:Georgia,"Times New Roman",serif;font-size:clamp(.95rem,1.2vw,1.06rem);font-weight:700;line-height:1.45;color:#fce6a0}
@@ -621,7 +623,7 @@ small{font-size:.86rem}
 .footer-logo-new img,.footer-logo-new img:first-child{width:clamp(220px,23vw,280px);height:auto}
 
 .embio-product-8000{background:#edf3eb;color:var(--ink)}
-.embio-product-8000 .embio-product-media{background:linear-gradient(180deg,rgba(255,255,255,0) 50%,rgba(37,92,54,.12) 100%),radial-gradient(125% 86% at 50% 8%,#f8fbf5 0%,#dcebd7 52%,#c9dfc4 100%)}
+.embio-product-8000 .embio-product-media{background:#fff}
 .embio-product-8000 .embio-product-stage img{filter:drop-shadow(0 20px 22px rgba(12,38,22,.28))}
 .embio-product-8000 .embio-product-stage::before{background:radial-gradient(ellipse at center,rgba(255,255,255,.72) 0%,rgba(255,255,255,0) 70%)}
 .embio-product-8000 .section-label{color:#2f7650}
@@ -675,47 +677,32 @@ small{font-size:.86rem}
   .tlc-product-grid article:last-child .tlc-card-media img{padding:20px}
 }
 
-/* Pulso evidente no atalho do WhatsApp do cabeçalho mobile. */
+/* O atalho superior replica exatamente o botão flutuante no mobile. */
 @media(max-width:760px){
-  .header-whatsapp.whatsapp-pulse{
-    position:relative;
-    isolation:isolate;
-    overflow:visible;
-    animation:headerWhatsappButtonBeat 2.2s ease-in-out infinite;
-    box-shadow:0 6px 18px rgba(9,80,39,.24);
+  .header-top{grid-template-columns:44px minmax(0,1fr) 58px}
+  .header-whatsapp.whatsapp-circle{
+    width:58px;height:58px;min-height:58px;padding:0;
+    border-radius:50%;background:#25d366;color:#fff;
+    box-shadow:0 14px 34px rgba(9,80,39,.32);
   }
-  .header-whatsapp.whatsapp-pulse::before,
-  .header-whatsapp.whatsapp-pulse::after{
-    content:"";
-    position:absolute;
-    inset:-3px;
-    z-index:-1;
-    border:2px solid #25d366;
-    border-radius:inherit;
-    pointer-events:none;
-    animation:headerWhatsappRing 2.2s cubic-bezier(.2,.65,.35,1) infinite;
-  }
-  .header-whatsapp.whatsapp-pulse::after{animation-delay:1.1s}
-  .header-whatsapp.whatsapp-pulse svg{animation:headerWhatsappIconBeat 2.2s ease-in-out infinite}
+  .header-whatsapp.whatsapp-circle svg{width:28px;height:28px}
+  .header-whatsapp.whatsapp-circle.whatsapp-pulse{animation:whatsappPulseFloat 2.6s ease-out infinite}
+  .hero-mark{display:grid;justify-items:center;gap:5px;margin-inline:auto;padding-bottom:12px;font-size:.7rem;line-height:1.4;letter-spacing:.15em}
+  .hero-mark-divider{display:none}
+  .hero-mark-owner{font-size:.82rem}
+  .hero-mark-statement{max-width:34ch}
 }
-@keyframes headerWhatsappRing{
-  0%{opacity:.78;transform:scale(.9)}
-  72%,100%{opacity:0;transform:scale(1.58)}
+
+/* Composição limpa do Embio 8000: apenas o frasco oficial sobre fundo branco. */
+.embio-product-8000 .embio-8000-media{
+  position:relative;display:grid;place-items:center;min-height:clamp(430px,42vw,520px);
+  padding:clamp(28px,5vw,56px);overflow:hidden;background:#fff;
 }
-@keyframes headerWhatsappButtonBeat{
-  0%,42%,100%{transform:scale(1)}
-  48%{transform:scale(1.08)}
-  54%{transform:scale(1)}
-  60%{transform:scale(1.05)}
+.embio-product-8000 .embio-8000-media .embio-product-stage{
+  position:relative;inset:auto;z-index:1;display:grid;place-items:center;width:100%;height:100%;transform:none;
 }
-@keyframes headerWhatsappIconBeat{
-  0%,42%,100%{transform:scale(1)}
-  48%{transform:scale(1.16)}
-  60%{transform:scale(1.1)}
-}
-@media(max-width:760px) and (prefers-reduced-motion:reduce){
-  .header-whatsapp.whatsapp-pulse,
-  .header-whatsapp.whatsapp-pulse::before,
-  .header-whatsapp.whatsapp-pulse::after,
-  .header-whatsapp.whatsapp-pulse svg{animation:none!important}
+.embio-product-8000 .embio-8000-media .embio-product-stage img{width:auto;max-height:clamp(350px,38vw,460px);filter:drop-shadow(0 20px 20px rgba(12,38,22,.2))}
+@media(max-width:760px){
+  .embio-product-8000 .embio-8000-media{min-height:430px;padding:28px}
+  .embio-product-8000 .embio-8000-media .embio-product-stage img{max-height:360px}
 }

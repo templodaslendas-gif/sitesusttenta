@@ -123,6 +123,7 @@ Observações sobre autorização: publicado diretamente no domínio oficial da 
 - Conteúdo específico do Embio 8000: página oficial `https://embio.com.br/`, consultada em 2026-09-12. Foram usadas somente as indicações públicas sobre efluentes industriais e agroindustriais, óleos, ácidos graxos, matéria orgânica e avaliação da estação, sem percentuais, dosagens ou garantia de resultado.
 - Imagem-fonte: `public/media/embio-official/embio-8000.webp`, já registrada neste documento e proveniente da apresentação oficial do produto.
 - Derivação publicada: `public/media/embio-official/embio-8000-frasco.webp` (340 × 816 px, WebP com transparência). O fundo branco conectado às bordas foi removido por flood-fill determinístico com tolerância baixa; rótulo, embalagem, cores e proporção foram preservados.
+- Composição publicada: somente o frasco oficial transparente sobre fundo branco, centralizado pelo código. Nenhum cenário gerado é usado; embalagem, rótulo, cores e proporção permanecem intactos.
 - Uso no site: seção própria do Embio 8000, sem depoimentos e com encaminhamento para avaliação técnica pelo WhatsApp.
 
 ### Identidade Susttenta atualizada (2026-09-12)

@@ -22,7 +22,7 @@ export function Header() {
     <div className="header-top container">
       <button className="menu-toggle" aria-label={open ? "Fechar menu" : "Abrir menu"} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
       <a className="site-logo" href="#inicio" aria-label="Susttenta, página inicial"><Image src="/favicon-master-1024.png" alt="" width={54} height={54} priority /><Image src="/logo-susttenta-wordmark.png" alt="Susttenta" width={178} height={25} priority /></a>
-      <WhatsAppLink message={whatsappMessages.embio} ariaLabel="Falar com a Susttenta pelo WhatsApp" className="header-whatsapp whatsapp-pulse"><WhatsAppIcon size={19} /><span>Falar com a Susttenta</span></WhatsAppLink>
+      <WhatsAppLink message={whatsappMessages.embio} ariaLabel="Falar com a Susttenta pelo WhatsApp" className="header-whatsapp whatsapp-circle whatsapp-pulse"><WhatsAppIcon size={19} /><span>Falar com a Susttenta</span></WhatsAppLink>
     </div>
     <div className="represented-brands" aria-label="Marcas representadas pela Susttenta">
       <div className="container represented-brands-inner">
@@ -55,7 +55,7 @@ export function Footer() {
       </div>
       <div className="container footer-bottom"><span>© 2026 Susttenta. Todos os direitos reservados.</span><a href="https://novositeffrdobrasil.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Desenvolvido por FFR do Brasil Technology, Brasil"><Image src="/media/brand/br-flag.svg" alt="" width={34} height={23} />Desenvolvido por FFR do Brasil Technology</a></div>
     </footer>
-    <WhatsAppLink message={whatsappMessages.embio} ariaLabel="Falar com a Susttenta pelo WhatsApp" className="floating-whatsapp whatsapp-pulse"><WhatsAppIcon size={32} /></WhatsAppLink>
+    <WhatsAppLink message={whatsappMessages.embio} ariaLabel="Falar com a Susttenta pelo WhatsApp" className="floating-whatsapp whatsapp-circle whatsapp-pulse"><WhatsAppIcon size={32} /></WhatsAppLink>
     <CookieConsent />
   </>;
 }

@@ -10,10 +10,10 @@ const source = (await Promise.all(files.map((file) => readFile(`${root}/${file}`
 test("keeps the hero copy focused on Susttenta and Embio", async () => {
   const heroSource = await readFile(`${root}/components/site/hero.tsx`, "utf8");
   assert.match(heroSource, /SUSTTENTA/);
-  assert.match(heroSource, /REPRESENTANTE AUTORIZADO EMBIO/);
+  assert.match(heroSource, /É REPRESENTANTE AUTORIZADA DA EMBIO E DA TLC AGRO/);
   assert.doesNotMatch(heroSource, /representante exclusivo|distribuidor exclusivo|exclusividade/i);
   assert.match(heroSource, /Especialista em tratamento de dejetos suínos e bovinos/);
-  assert.doesNotMatch(heroSource, /TLC|Ecomax|ecomax/i);
+  assert.doesNotMatch(heroSource, /Ecomax|ecomax/i);
   assert.match(heroSource, /embiofert-propulsor-hero\.mp4/);
   assert.match(heroSource, /prefers-reduced-motion/);
   assert.match(heroSource, /visibilitychange/);
@@ -71,6 +71,7 @@ test("presents the Embio bottles as trimmed transparent artwork on a coherent st
   assert.match(sections, /embio-3100-frasco\.webp/);
   assert.match(sections, /embio-6000-frasco\.webp/);
   assert.match(sections, /embio-8000-frasco\.webp/);
+  assert.doesNotMatch(sections, /embio-8000-aplicacao-efluentes\.webp|embio-8000-context-label/);
   assert.doesNotMatch(sections, /embio-official\/embio-3100\.webp|embio-official\/embio-6000\.webp/);
   assert.match(sections, /embio-product-stage/);
   assert.match(css, /\.embio-product-stage::after/);
@@ -152,10 +153,11 @@ test("preserves accessible FAQ, WhatsApp and developer credit", () => {
 
 test("keeps the header WhatsApp shortcut visibly pulsing on mobile", async () => {
   const css = await readFile(`${root}/app/globals.css`, "utf8");
-  assert.match(source, /className="header-whatsapp whatsapp-pulse"/);
-  assert.match(css, /\.header-whatsapp\.whatsapp-pulse::before/);
-  assert.match(css, /@keyframes headerWhatsappRing/);
-  assert.match(css, /@keyframes headerWhatsappButtonBeat/);
+  assert.match(source, /className="header-whatsapp whatsapp-circle whatsapp-pulse"/);
+  assert.match(source, /className="floating-whatsapp whatsapp-circle whatsapp-pulse"/);
+  assert.match(css, /\.header-whatsapp\.whatsapp-circle\.whatsapp-pulse\{animation:whatsappPulseFloat 2\.6s ease-out infinite\}/);
+  assert.match(css, /\.header-whatsapp\.whatsapp-circle svg\{width:28px;height:28px\}/);
+  assert.doesNotMatch(css, /headerWhatsappRing|headerWhatsappButtonBeat/);
   assert.match(css, /prefers-reduced-motion:reduce/);
 });
 

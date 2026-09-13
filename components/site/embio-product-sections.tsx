@@ -73,14 +73,14 @@ export function Embio8000Section() {
       <div className="embio-product-copy">
         <p className="section-label">Efluentes industriais e agroindustriais</p>
         <h2>Embio 8000</h2>
-        <p className="lead">Tratamento biotecnológico desenvolvido para efluentes com alta concentração de óleos e ácidos graxos.</p>
+        <p className="lead">Tratamento biotecnológico desenvolvido para lagoas e estações com efluentes ricos em óleos e ácidos graxos, como pode ocorrer em laticínios e outras operações agroindustriais com formação intensa de espuma.</p>
         <ul className="technical-list">
           <li><Droplets />Auxilia a biodegradação de óleos, gorduras e compostos orgânicos complexos.</li>
-          <li><Factory />Apoia a redução da carga orgânica e de odores em estações de tratamento biológico.</li>
+          <li><Factory />Apoia o manejo biológico da carga orgânica e da espuma associada à presença de óleos e gorduras.</li>
           <li><ShieldAlert />Aplicação definida a partir das características do efluente e da estrutura da estação.</li>
         </ul>
       </div>
-      <div className="embio-product-media">
+      <div className="embio-product-media embio-8000-media">
         <div className="embio-product-stage">
           <Image src="/media/embio-official/embio-8000-frasco.webp" alt="Frasco oficial do Embio 8000, bioestimulador da linha agroindústria" width={340} height={816} sizes="(max-width: 900px) 66vw, 34vw" />
         </div>
