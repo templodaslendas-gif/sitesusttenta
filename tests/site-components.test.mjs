@@ -7,10 +7,9 @@ const root = fileURLToPath(new URL("..", import.meta.url));
 const files = ["app/site-client.tsx", "components/site/hero.tsx", "components/site/embio-overview.tsx", "components/site/embiofert-section.tsx", "components/site/embio-product-sections.tsx", "components/site/tlc-section.tsx", "components/site/closing-sections.tsx", "components/site/site-chrome.tsx", "components/site/product-video-gallery.tsx", "components/site/inline-video.tsx", "components/site/site-data.ts"];
 const source = (await Promise.all(files.map((file) => readFile(`${root}/${file}`, "utf8")))).join("\n");
 
-test("keeps the hero copy focused on Susttenta and Embio", async () => {
+test("keeps the hero concise without repeating the representation banner", async () => {
   const heroSource = await readFile(`${root}/components/site/hero.tsx`, "utf8");
-  assert.match(heroSource, /SUSTTENTA/);
-  assert.match(heroSource, /É REPRESENTANTE AUTORIZADA DA EMBIO E DA TLC AGRO/);
+  assert.doesNotMatch(heroSource, /hero-mark|REPRESENTANTE AUTORIZADA/);
   assert.doesNotMatch(heroSource, /representante exclusivo|distribuidor exclusivo|exclusividade/i);
   assert.match(heroSource, /Especialista em tratamento de dejetos suínos e bovinos/);
   assert.doesNotMatch(heroSource, /Ecomax|ecomax/i);
@@ -149,6 +148,9 @@ test("preserves accessible FAQ, WhatsApp and developer credit", () => {
   assert.match(source, /ariaLabel="Falar com a Susttenta pelo WhatsApp"/);
   assert.match(source, /Desenvolvido por FFR do Brasil Technology/);
   assert.match(source, /br-flag\.svg/);
+  assert.match(source, /className="footer-phone footer-whatsapp-contact"/);
+  assert.match(source, /message=\{whatsappMessages\.general\}/);
+  assert.match(source, /\+55 \(46\) 99925-9777/);
 });
 
 test("keeps the header WhatsApp shortcut visibly pulsing on mobile", async () => {

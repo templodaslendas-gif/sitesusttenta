@@ -6,7 +6,7 @@ Uma apresentação de campo tecnicamente orientada: estrutura editorial firme, g
 
 ## Hierarquia
 
-1. Cabeçalho institucional Susttenta com faixa de representação destacando Embio e TLC Agro nas cores oficiais; hero focada na especialidade técnica e no vídeo real do Propulsor, com identificação centralizada da Susttenta como representante autorizada das duas marcas.
+1. Cabeçalho institucional Susttenta com faixa de representação destacando Embio e TLC Agro nas cores oficiais; hero focada somente na especialidade técnica, no vídeo real do Propulsor e nos caminhos de ação, sem repetir a representação já informada acima.
 2. Visão geral Embio seguida por laboratório em vídeo de largura total.
 3. Tratamento Embiofert em máxima ênfase, abrindo com operação em vídeo e depois relatos de campo.
 4. Embio 3100 e Embio 6000 em seções independentes, com seus relatos de campo.

@@ -70,11 +70,6 @@ export function Hero() {
       </button>
       <div className="container hero-cinema-content">
         <div className="hero-copy" data-reveal>
-          <p className="hero-mark">
-            <span className="hero-mark-owner">SUSTTENTA</span>
-            <span className="hero-mark-divider" aria-hidden="true">|</span>
-            <span className="hero-mark-statement">É REPRESENTANTE AUTORIZADA DA EMBIO E DA TLC AGRO</span>
-          </p>
           <h1>Especialista em tratamento de dejetos suínos e bovinos</h1>
           <p className="hero-summary">Tecnologia Embio e orientação técnica aplicadas à realidade de cada operação.</p>
           <div className="hero-actions">
