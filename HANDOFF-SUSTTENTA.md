@@ -39,7 +39,7 @@ Implementado sem tocar nos componentes visuais ou no CSS:
 
 - Nenhuma alteração em Supabase, banco, autenticação, APIs, DNS, e-mails ou secrets.
 - Nenhuma alteração visual autorizada ou executada.
-- Merge e produção não autorizados.
+- Merge e produção foram autorizados explicitamente após a homologação e concluídos sem `force push`.
 - Dados jurídicos não foram inventados; identificação formal do controlador, CNPJ e e-mail de privacidade continuam pendentes de confirmação.
 
 ## Validação e prévia
@@ -73,6 +73,30 @@ Observação: a auditoria completa, incluindo ferramentas apenas de desenvolvime
 - acesso externo: protegido pela autenticação da Vercel. A proteção não foi desativada nem contornada;
 - validação do conteúdo: realizada no build local equivalente de produção e no build simulado de prévia; a verificação remota confirmou a conclusão do build, mas a navegação pública automatizada é bloqueada pela proteção da Vercel.
 
-## Próximo passo autorizado
+## Fase 3 — produção
 
-Criar commits, fazer push desta branch e validar somente a prévia Vercel. Não fazer merge na `main` nem publicar em produção.
+- autorização recebida para merge, push normal e produção no projeto Vercel existente;
+- merge aplicado por fast-forward: `main` avançou de `55c5847` para `ad7cca3`;
+- histórico preservado; nenhum `force push`;
+- deployment Vercel: `dpl_684Nmh5TMLQE8EcwkcvZ6nEHg9ja`;
+- ambiente confirmado: `Production`;
+- status confirmado: `Ready`;
+- domínio atual confirmado: `https://www.susttenta.com.br/`;
+- origem confirmada: branch `main`, commit `ad7cca3`;
+- home: canonical oficial, `index, follow`, Open Graph e JSON-LD confirmados;
+- mídia: 32 imagens sem falha e vídeo sem erro;
+- conversão: 14 links de WhatsApp presentes;
+- responsividade básica: sem overflow horizontal no viewport validado;
+- console: nenhum erro ou aviso originado de `susttenta.com.br`;
+- rotas `/privacidade`, `/cookies`, `/termos`, `/robots.txt`, `/sitemap.xml` e `/llms.txt` carregadas em produção;
+- conteúdo visual e comercial preservado.
+
+## Pendências futuras não executadas
+
+- preencher identificação formal do controlador, CNPJ e e-mail de privacidade somente após confirmação do cliente;
+- enviar o sitemap e acompanhar indexação no Google Search Console em uma missão separada, se autorizado;
+- avaliar com cautela as atualizações incompatíveis da cadeia de desenvolvimento Vinext/Cloudflare/Vite, sem `npm audit fix --force`.
+
+## Estado ao encerrar a fase
+
+Produção técnica concluída e validada. Não há nova mudança ou publicação autorizada após este handoff.
