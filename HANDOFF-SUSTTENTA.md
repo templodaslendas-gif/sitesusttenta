@@ -96,7 +96,7 @@ Observação: a auditoria completa, incluindo ferramentas apenas de desenvolvime
 - preencher razão social, CNPJ e e-mail específico de privacidade quando essas informações forem formalmente disponibilizadas;
 - avaliar com cautela as atualizações incompatíveis da cadeia de desenvolvimento Vinext/Cloudflare/Vite, sem `npm audit fix --force`.
 
-## Fase 4 — Search Console e alinhamento jurídico (em andamento)
+## Fase 4 — Search Console e alinhamento jurídico (prévia concluída)
 
 - propriedade de domínio `susttenta.com.br` criada e verificada no Google Search Console por registro TXT específico no DNS;
 - nenhum registro A, CNAME, MX, SPF, DKIM, DMARC, nameserver ou outro domínio foi alterado;
@@ -107,8 +107,15 @@ Observação: a auditoria completa, incluindo ferramentas apenas de desenvolvime
 - auditoria do código não identificou ferramenta ativa de analytics, publicidade ou perfilamento; a documentação agora declara esse estado e exige renovação do consentimento antes de eventual ativação futura;
 - validação local concluída: lint aprovado, TypeScript aprovado, 35/35 testes aprovados, build Next.js aprovado com sete rotas públicas e `git diff --check` limpo;
 - o sitemap público foi verificado diretamente com HTTP 200 e `Content-Type: application/xml`; o `robots.txt` aponta para a URL canônica correta;
-- esta fase ainda não possui commit, push, prévia, merge ou publicação autorizados.
+- commit remoto da implementação: `e76eab86cf2df2062d44c9dd656a31365ff0ea5f` (`feat: alinhar políticas de privacidade e cookies`);
+- branch publicada: `site/politicas-lgpd-susttenta-2026-10-24`;
+- deployment de prévia: `dpl_De7U5BY3BQEwx4tGPM8zm9bhJNz3`;
+- URL da prévia: `https://sitesusttenta-j0kvbq94a-templodaslendas-gifs-projects.vercel.app/`;
+- Vercel confirmou origem na branch jurídica, commit correto, ambiente de prévia (`target: null`) e status `READY`;
+- `/privacidade`, `/cookies` e `/termos` foram abertas na prévia autenticada e tiveram títulos, data, estrutura semântica, canal de WhatsApp e conteúdo novo confirmados;
+- painel de preferências aberto na prévia: necessários ativos, categorias de análise e marketing identificadas como inativas e controles preservados;
+- a proteção da prévia foi mantida; nenhum domínio de produção foi atribuído e `main` não foi alterada.
 
 ## Estado ao encerrar a fase
 
-Produção técnica concluída e validada. Não há nova mudança ou publicação autorizada após este handoff.
+Search Console concluído e prévia jurídica pronta para homologação. A produção técnica continua no commit `d240d24`; não há autorização para merge ou produção desta fase jurídica.
