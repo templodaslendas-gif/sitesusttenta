@@ -62,7 +62,16 @@ Observação: a auditoria completa, incluindo ferramentas apenas de desenvolvime
 
 ### Prévia Vercel
 
-A preencher após o push da branch e a validação do deployment remoto.
+- commit técnico remoto: `96eca78c1300701d366fd07d4fc14df4cf94832f`;
+- check GitHub/Vercel: `success`;
+- status no painel Vercel: `Ready`;
+- ambiente: `Preview`;
+- origem confirmada: branch `site/auditoria-tecnica-2026-10-24` e commit `96eca78`;
+- domínio estável da branch: `https://sitesusttenta-git-site-aud-d59212-templodaslendas-gifs-projects.vercel.app/`;
+- deployment inicial imutável: `https://sitesusttenta-rlbno8by2-templodaslendas-gifs-projects.vercel.app/`;
+- atribuição de domínios personalizados: `Skipped`; produção não alterada;
+- acesso externo: protegido pela autenticação da Vercel. A proteção não foi desativada nem contornada;
+- validação do conteúdo: realizada no build local equivalente de produção e no build simulado de prévia; a verificação remota confirmou a conclusão do build, mas a navegação pública automatizada é bloqueada pela proteção da Vercel.
 
 ## Próximo passo autorizado
 
