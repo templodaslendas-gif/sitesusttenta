@@ -93,9 +93,21 @@ Observação: a auditoria completa, incluindo ferramentas apenas de desenvolvime
 
 ## Pendências futuras não executadas
 
-- preencher identificação formal do controlador, CNPJ e e-mail de privacidade somente após confirmação do cliente;
-- enviar o sitemap e acompanhar indexação no Google Search Console em uma missão separada, se autorizado;
+- preencher razão social, CNPJ e e-mail específico de privacidade quando essas informações forem formalmente disponibilizadas;
 - avaliar com cautela as atualizações incompatíveis da cadeia de desenvolvimento Vinext/Cloudflare/Vite, sem `npm audit fix --force`.
+
+## Fase 4 — Search Console e alinhamento jurídico (em andamento)
+
+- propriedade de domínio `susttenta.com.br` criada e verificada no Google Search Console por registro TXT específico no DNS;
+- nenhum registro A, CNAME, MX, SPF, DKIM, DMARC, nameserver ou outro domínio foi alterado;
+- sitemap oficial enviado como `https://www.susttenta.com.br/sitemap.xml`; após a leitura inicial transitória, o Search Console confirmou status `Processado`, tipo `Sitemap`, data de leitura em 24/10/2026 e quatro páginas encontradas;
+- branch local: `site/politicas-lgpd-susttenta-2026-10-24`;
+- políticas de Privacidade/LGPD, Cookies e Termos ampliadas sem alterar layout, cores, tipografia, imagens, vídeos ou conteúdo comercial;
+- dados empresariais não confirmados não foram inventados; o canal público confirmado para solicitações de titulares é o WhatsApp oficial;
+- auditoria do código não identificou ferramenta ativa de analytics, publicidade ou perfilamento; a documentação agora declara esse estado e exige renovação do consentimento antes de eventual ativação futura;
+- validação local concluída: lint aprovado, TypeScript aprovado, 35/35 testes aprovados, build Next.js aprovado com sete rotas públicas e `git diff --check` limpo;
+- o sitemap público foi verificado diretamente com HTTP 200 e `Content-Type: application/xml`; o `robots.txt` aponta para a URL canônica correta;
+- esta fase ainda não possui commit, push, prévia, merge ou publicação autorizados.
 
 ## Estado ao encerrar a fase
 
