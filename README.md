@@ -35,3 +35,15 @@ As fontes e transformações das mídias oficiais são registradas em [`docs/MED
 ## Publicação
 
 O projeto possui configuração de hospedagem existente. Não crie outro projeto e não faça push ou deploy sem autorização expressa do responsável pela Susttenta.
+
+## SEO e segurança técnica
+
+- Origem canônica: `https://www.susttenta.com.br`
+- Rotas geradas pelo Next.js: `/robots.txt` e `/sitemap.xml`
+- Dados estruturados: `Organization` e `WebSite`
+- Resumo legível por agentes: `/llms.txt`
+- Cabeçalhos de segurança configurados em `next.config.ts`
+- A instalação na Vercel usa `npm ci` para respeitar o lockfile
+
+O estado operacional e os checkpoints de cada fase ficam registrados em
+[`HANDOFF-SUSTTENTA.md`](HANDOFF-SUSTTENTA.md).

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
 
-export const metadata: Metadata = { title: "Política de Privacidade e LGPD | Susttenta", description: "Como a Susttenta trata dados pessoais e protege a privacidade dos visitantes." };
+export const metadata: Metadata = { title: "Política de Privacidade e LGPD", description: "Como a Susttenta trata dados pessoais e protege a privacidade dos visitantes.", alternates: { canonical: "/privacidade" } };
 
 export default function PrivacyPage() {
   return <LegalPage eyebrow="Privacidade e LGPD" title="Política de Privacidade" intro="Este documento explica como os dados pessoais podem ser coletados, utilizados, armazenados e protegidos durante sua interação com a Susttenta.">

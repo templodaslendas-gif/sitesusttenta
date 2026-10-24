@@ -1,0 +1,23 @@
+# Susttenta
+
+> Site institucional e comercial da Susttenta, com orientação técnica para soluções biotecnológicas aplicadas ao campo.
+
+Site oficial: https://www.susttenta.com.br/
+Contato oficial: https://wa.me/5546999259777
+Idioma: português do Brasil
+
+## Escopo
+
+- A Susttenta apresenta prioritariamente a linha Embio.
+- O Tratamento Embiofert é a principal solução comercial apresentada.
+- Embio 3100, Embio 6000 e Embio 8000 possuem aplicações distintas e dependem de avaliação técnica.
+- A TLC Agro e a linha Ecomax aparecem como linha complementar para controle de moscas.
+- Relatos de campo são experiências individuais e não representam garantia de resultado.
+- Dosagens, aplicação e recomendação devem ser confirmadas diretamente com a equipe técnica.
+
+## Páginas oficiais
+
+- Página inicial: https://www.susttenta.com.br/
+- Privacidade e LGPD: https://www.susttenta.com.br/privacidade
+- Política de Cookies: https://www.susttenta.com.br/cookies
+- Termos de Uso: https://www.susttenta.com.br/termos

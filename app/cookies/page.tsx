@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
 
-export const metadata: Metadata = { title: "Política de Cookies | Susttenta", description: "Entenda quais cookies o site da Susttenta utiliza e como controlar suas preferências." };
+export const metadata: Metadata = { title: "Política de Cookies", description: "Entenda quais cookies o site da Susttenta utiliza e como controlar suas preferências.", alternates: { canonical: "/cookies" } };
 
 export default function CookiesPage() {
   return <LegalPage eyebrow="Controle e transparência" title="Política de Cookies" intro="Você escolhe quais categorias não essenciais podem ser utilizadas durante a navegação.">

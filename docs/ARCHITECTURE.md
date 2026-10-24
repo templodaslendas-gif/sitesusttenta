@@ -16,3 +16,13 @@
 Ordem das seções: hero → Tratamento Embiofert → visão geral Embio → laboratório → Embio 3100 → Embio 6000 → Embio 8000 → TLC Agro → Pedro → FAQ → contato → rodapé.
 
 Os vídeos Embio e TLC usam o contrato `ProductVideo` centralizado em `site-data.ts`; itens `coming-soon` ou sem `videoSrc` não renderizam player. Nenhum vídeo pesado é carregado antes da interação do visitante. As interações usam React e CSS, sem nova biblioteca de animação. Conteúdo essencial permanece no HTML e os efeitos respeitam `prefers-reduced-motion`.
+
+## Camada técnica pública
+
+- `app/seo.ts`: origem canônica, descrição, imagem social e JSON-LD centralizados;
+- `app/robots.ts` e `app/sitemap.ts`: controles de rastreamento e índice das quatro rotas públicas;
+- `public/llms.txt`: resumo factual para agentes, sem substituir HTML, sitemap ou dados estruturados;
+- `next.config.ts`: cabeçalhos HTTP defensivos aplicados a todas as rotas;
+- `vercel.json`: build Next.js e instalação determinística via `npm ci`.
+
+Esses recursos não alteram a composição visual do site. Search Console e publicação permanecem operações externas separadas, sempre dependentes de autorização.

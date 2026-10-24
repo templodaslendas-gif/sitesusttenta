@@ -26,6 +26,8 @@ A Susttenta é apresentada prioritariamente como **representante da Embio**; a *
    do responsável pela Susttenta.
 8. Após trabalho relevante, atualizar a documentação afetada (`README`, `PRODUCT`, `DESIGN`,
    `docs/`) e, se houver decisão durável nova, propô-la para o Knowledge Vault.
+9. Ao encerrar cada fase (auditoria, implementação, prévia, produção), atualizar
+   `HANDOFF-SUSTTENTA.md` com fatos verificados, testes, commit, URLs, riscos e próximo passo.
 
 ## Regras de posicionamento (não violar)
 

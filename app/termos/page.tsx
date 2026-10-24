@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
 
-export const metadata: Metadata = { title: "Termos de Uso | Susttenta", description: "Condições de uso do site institucional da Susttenta." };
+export const metadata: Metadata = { title: "Termos de Uso", description: "Condições de uso do site institucional da Susttenta.", alternates: { canonical: "/termos" } };
 
 export default function TermsPage() {
   return <LegalPage eyebrow="Condições de navegação" title="Termos de Uso" intro="Ao acessar este site, você concorda com as condições abaixo e com as políticas de privacidade e cookies.">
