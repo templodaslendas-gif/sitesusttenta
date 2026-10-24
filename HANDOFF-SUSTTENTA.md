@@ -118,4 +118,24 @@ Observação: a auditoria completa, incluindo ferramentas apenas de desenvolvime
 
 ## Estado ao encerrar a fase
 
-Search Console concluído e prévia jurídica pronta para homologação. A produção técnica continua no commit `d240d24`; não há autorização para merge ou produção desta fase jurídica.
+Search Console concluído e prévia jurídica homologada.
+
+## Fase 5 — produção jurídica
+
+- autorização recebida para dar sequência após a homologação da prévia;
+- `main` avançou por fast-forward de `d240d2407780864dd4c5c13fd4a8a2b69805f4b9` para `873f7ecbecfd9226c2ae1489dadb2847ccc4239f`;
+- histórico preservado; nenhum `force push`, rebase destrutivo ou novo projeto Vercel foi utilizado;
+- deployment de produção das políticas: `dpl_EyW3YfjRMU99WvoZs6SuxkvfWkTN`;
+- Vercel confirmou branch `main`, commit correto, ambiente `production` e status `READY`;
+- domínio validado: `https://www.susttenta.com.br/`;
+- `/privacidade`, `/cookies` e `/termos` exibem os títulos, a revisão de 24/10/2026 e o conteúdo aprovado;
+- canal LGPD e de cookies pelo WhatsApp oficial confirmado nas páginas aplicáveis;
+- painel de preferências aberto em produção: necessários ativos, análise e marketing declarados como categorias não utilizadas e nova solicitação de consentimento prevista antes de eventual ativação;
+- home validada após a publicação: hero, Embio 8000, WhatsApp e links jurídicos preservados;
+- console de produção sem erros durante a validação;
+- Search Console permanece com propriedade verificada e sitemap processado com quatro páginas;
+- nenhuma alteração visual, de DNS adicional, variáveis de ambiente, banco, autenticação ou integração externa foi realizada nesta fase.
+
+## Estado final
+
+Atualização jurídica publicada e validada no projeto Vercel existente. A identificação por razão social, CNPJ e e-mail específico de privacidade poderá ser acrescentada futuramente quando esses dados forem disponibilizados, sem exigir mudança na estrutura atual.
